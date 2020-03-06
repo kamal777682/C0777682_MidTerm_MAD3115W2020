@@ -25,6 +25,10 @@ class ViewController: UIViewController {
         txtPassword.text = ""
     }
     @IBAction func btnLogin(_ sender: UIButton) {
+        if (txtEmail.text?.isValidEmail())!
+        {
+            
+        }
     }
     
 
