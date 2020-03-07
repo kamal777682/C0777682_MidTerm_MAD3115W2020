@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddNewCustomerViewController: UIViewController {
+class AddNewCustomerViewController: UIViewController{
 
       @IBOutlet var txtCustomerID: UITextField!
       @IBOutlet var txtCustomeFName: UITextField!
@@ -19,9 +19,7 @@ class AddNewCustomerViewController: UIViewController {
       @IBOutlet var txtCustomerEmail: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+        viewDidAppear(true)
     }
     
     @IBAction func btnCustDetails(_ sender: UIBarButtonItem)
@@ -35,7 +33,8 @@ class AddNewCustomerViewController: UIViewController {
     
     @IBAction func btnSaveCustomer(_ sender: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
-          if ((txtCustomerID.text == "" && txtFirstName.text == "") && (txtLastName.text == "" && txtEmail.text == "")){
+          if ((txtCustomerID.text == "" && txtCustomeFName.text == "") && (txtCustomerLName.text == "" && txtCustomerEmail.text == ""))
+          {
               let alertController = UIAlertController(title: "Failed", message:
                 "Enter new customer details", preferredStyle: .alert)
               alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
@@ -46,32 +45,29 @@ class AddNewCustomerViewController: UIViewController {
                 "Enter Customer ID", preferredStyle: .alert)
               alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
               self.present(alertController, animated: true, completion: nil)
-            }else if txtFirstName.text == ""{
+            }else if txtCustomeFName.text == ""{
               let alertController = UIAlertController(title: "Failed", message:
                 "Enter Customer First Name", preferredStyle: .alert)
               alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
               self.present(alertController, animated: true, completion: nil)
-            }else if txtLastName.text == ""{
+            }else if txtCustomerLName.text == ""{
               let alertController = UIAlertController(title: "Failed", message:
                 "Enter Customer Last Name", preferredStyle: .alert)
               alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
               self.present(alertController, animated: true, completion: nil)
-            }else if txtEmail.text == ""{
+          }else if txtCustomerEmail.text == ""{
               let alertController = UIAlertController(title: "Failed", message:
                 "Enter email", preferredStyle: .alert)
               alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
               self.present(alertController, animated: true, completion: nil)
             }else{
-              if txtEmail.text?.emailValid() == true{
-                DataStorage.getInstance().addCustomer(customer: Customer(customerId: txtCustomerID.text ?? "", firstName: txtFirstName.text ?? "", lastName: txtLastName.text ?? "", email: txtEmail.text ?? ""))
+              if txtCustomerEmail.text?.isValidEmail() == true{
+                DataStorage.getInstance().addCustomer(customer: Customer(customerId: txtCustomerID.text ?? "", firstName: txtCustomeFName.text ?? "", lastName: txtCustomerLName.text ?? "", email: txtCustomerEmail.text ?? ""))
                 let alertController = UIAlertController(title: "Saved", message:
                   "New Customer created", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
                 self.present(alertController, animated: true, completion: nil)
-        //        let sb = UIStoryboard(name: "Main", bundle: nil)
-        //        let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
-        //        self.navigationController?.pushViewController(customerListVC, animated: true)
-        //
+        
               }else{
                 let alertController = UIAlertController(title: "Failed", message:
                   "Enter valid email", preferredStyle: .alert)
