@@ -32,6 +32,9 @@ class DataStorage
     func loadCustomerDetails()
     {
         customerList.append(Customer(customerId: "C001", firstName: "Kamalpreet", lastName: "kaur", email: "kamal342@gmail.com"))
-        customerList.append(Customer(customerId: "C002", firstName: "Nikita", lastName: "Sandhu", email: <#T##String#>))
+        customerList.append(Customer(customerId: "C002", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu12@yahoo.com"))
+        customerList.append(Customer(customerId: "C003", firstName: "Jyoti", lastName: "Thomas", email: "JyotiThomas@gmail.com"))
+        customerList.append(Customer(customerId: "C004", firstName: "Charmi", lastName: "Patel", email: "Charmi56@yahoo.com"))
+        customerList.append(Customer(customerId: "C005", firstName: "Avni", lastName: "Patel", email: "Avnip@"))
     }
 }
