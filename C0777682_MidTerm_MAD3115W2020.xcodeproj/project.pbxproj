@@ -15,6 +15,8 @@
 		9B1D60772413082900101427 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B1D60752413082900101427 /* LaunchScreen.storyboard */; };
 		9B1D607F24130D0F00101427 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1D607E24130D0F00101427 /* Extension.swift */; };
 		9B1D60A924131E8500101427 /* CustomerTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1D60A824131E8500101427 /* CustomerTableTableViewController.swift */; };
+		9B1D60AB2413219200101427 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1D60AA2413219200101427 /* DataStorage.swift */; };
+		9B1D60AD2413238E00101427 /* Customers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1D60AC2413238E00101427 /* Customers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		9B1D60782413082900101427 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B1D607E24130D0F00101427 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		9B1D60A824131E8500101427 /* CustomerTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTableTableViewController.swift; sourceTree = "<group>"; };
+		9B1D60AA2413219200101427 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		9B1D60AC2413238E00101427 /* Customers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				9B1D60782413082900101427 /* Info.plist */,
 				9B1D607E24130D0F00101427 /* Extension.swift */,
 				9B1D60A824131E8500101427 /* CustomerTableTableViewController.swift */,
+				9B1D60AA2413219200101427 /* DataStorage.swift */,
+				9B1D60AC2413238E00101427 /* Customers.swift */,
 			);
 			path = C0777682_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -145,8 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B1D606F2413082700101427 /* ViewController.swift in Sources */,
+				9B1D60AD2413238E00101427 /* Customers.swift in Sources */,
 				9B1D606B2413082700101427 /* AppDelegate.swift in Sources */,
 				9B1D60A924131E8500101427 /* CustomerTableTableViewController.swift in Sources */,
+				9B1D60AB2413219200101427 /* DataStorage.swift in Sources */,
 				9B1D606D2413082700101427 /* SceneDelegate.swift in Sources */,
 				9B1D607F24130D0F00101427 /* Extension.swift in Sources */,
 			);

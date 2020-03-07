@@ -43,17 +43,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="nEo-Ic-EuY">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="krP-hV-Ggh">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QW5-1e-umS">
-                                <rect key="frame" x="356" y="7" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GA3-jt-c71"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="SEu-1C-bjr">
                             <connections>
-                                <segue destination="Iyw-XE-zKm" kind="show" id="533-r4-npg"/>
+                                <segue destination="Iyw-XE-zKm" kind="show" id="N7L-oT-Lai"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -70,7 +62,7 @@
         <!--Customer Table View Controller-->
         <scene sceneID="X0z-Bf-mdU">
             <objects>
-                <tableViewController id="Iyw-XE-zKm" customClass="CustomerTableViewController" sceneMemberID="viewController">
+                <tableViewController id="Iyw-XE-zKm" customClass="CustomerTableViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y40-0v-fWf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
