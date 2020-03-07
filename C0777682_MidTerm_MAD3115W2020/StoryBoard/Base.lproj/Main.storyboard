@@ -62,24 +62,24 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
         </scene>
-        <!--Customer Table View Controller-->
+        <!--Customer List View Controller-->
         <scene sceneID="bDs-do-FXj">
             <objects>
-                <viewController storyboardIdentifier="customerVC" id="ozl-hi-Ccz" customClass="CustomerTableViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="customerListVC" id="ozl-hi-Ccz" customClass="CustomerListViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="20" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="78b-Ui-Gtm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomerName" textLabel="fcE-Rc-Moe" style="IBUITableViewCellStyleDefault" id="Wpi-zj-cHv">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomerName" textLabel="fcE-Rc-Moe" rowHeight="46" style="IBUITableViewCellStyleDefault" id="Wpi-zj-cHv">
+                                <rect key="frame" x="0.0" y="28" width="414" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wpi-zj-cHv" id="EM5-Kf-PIC">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fcE-Rc-Moe">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="374" height="46"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -89,6 +89,10 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ozl-hi-Ccz" id="gKF-Ak-8UH"/>
+                            <outlet property="delegate" destination="ozl-hi-Ccz" id="SPr-sy-2zB"/>
+                        </connections>
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="3h6-7t-bME">
@@ -106,38 +110,71 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tblCustomers" destination="78b-Ui-Gtm" id="9cl-JS-Xio"/>
+                        <segue destination="M2K-PS-ePG" kind="show" id="FuD-eG-3ku"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOg-58-P75" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="138"/>
+            <point key="canvasLocation" x="1840.5797101449277" y="137.94642857142856"/>
         </scene>
-        <!--Add New Customer View Controller-->
+        <!--Add New Customer-->
         <scene sceneID="As2-yr-xBo">
             <objects>
                 <viewController storyboardIdentifier="addCustVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FIm-Wn-zbA" customClass="AddNewCustomerViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="addCustVC" id="eAH-gP-qcP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customer ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FI4-7K-cdd">
+                                <rect key="frame" x="20" y="141" width="217" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customer's  First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NMB-8g-pft">
+                                <rect key="frame" x="20" y="197" width="217" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customer's Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fai-a8-s0Q">
+                                <rect key="frame" x="20" y="257" width="217" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customer's Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Daf-aQ-KQO">
+                                <rect key="frame" x="20" y="299" width="217" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="eIU-p7-eto"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Pgi-iv-oQq">
+                    <navigationItem key="navigationItem" title="Add New Customer" id="Pgi-iv-oQq">
                         <barButtonItem key="leftBarButtonItem" title="Customers" id="Pk0-Qz-D0h">
                             <connections>
                                 <action selector="btnCustDetails:" destination="FIm-Wn-zbA" id="FKn-sC-HyE"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="2aq-ly-zhZ">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="2aq-ly-zhZ">
                             <connections>
-                                <action selector="btlLogout:" destination="FIm-Wn-zbA" id="bwT-g8-hVQ"/>
+                                <action selector="btnSaveCustomer:" destination="FIm-Wn-zbA" id="8Pj-t9-PiG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="txtCustomeFName" destination="NMB-8g-pft" id="aTi-4o-nf1"/>
+                        <outlet property="txtCustomerEmail" destination="Daf-aQ-KQO" id="4xL-lV-dmC"/>
+                        <outlet property="txtCustomerID" destination="FI4-7K-cdd" id="Huh-GB-EcG"/>
+                        <outlet property="txtCustomerLName" destination="fai-a8-s0Q" id="QwC-HV-chf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJn-dT-3JW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2867" y="511"/>
+            <point key="canvasLocation" x="2755" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wdQ-jK-zks">
@@ -157,21 +194,21 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--CustomerDetails-->
         <scene sceneID="01Z-Jx-DPn">
             <objects>
-                <viewController id="M2K-PS-ePG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailedCustomerVC" id="M2K-PS-ePG" customClass="DetailedCustomerViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gwS-UJ-fvl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Foq-uJ-I8T"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rFx-nj-soy"/>
+                    <navigationItem key="navigationItem" title="CustomerDetails" id="rFx-nj-soy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRk-Zl-wBV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2867" y="-191"/>
+            <point key="canvasLocation" x="3891" y="119"/>
         </scene>
     </scenes>
 </document>

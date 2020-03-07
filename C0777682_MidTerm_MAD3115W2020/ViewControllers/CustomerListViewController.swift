@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomerTableViewController: UIViewController
+class CustomerListViewController: UIViewController
 {
 
    
@@ -19,8 +19,7 @@ class CustomerTableViewController: UIViewController
     override func viewDidLoad() {
     super.viewDidLoad()
         
-        //customerName = DataStorage.getInstance().loadCustomerDetails()
-        
+        customerName = DataStorage.getInstance().dictionaryToArray()
        // self.navigationController?.hidesBarsOnTap = true
         //Hide Back Button from navigation Bar
         //self.navigationItem.hidesBackButton = true
@@ -33,17 +32,18 @@ class CustomerTableViewController: UIViewController
     }
 }
 
-extension CustomerTableViewController:UITableViewDelegate,UITableViewDataSource
+extension CustomerListViewController:UITableViewDelegate,UITableViewDataSource
 {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return customerName.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerName")
         let customer = customerName[indexPath.row]
         
         cell?.textLabel?.text = customer.firstName
@@ -51,11 +51,6 @@ extension CustomerTableViewController:UITableViewDelegate,UITableViewDataSource
         return cell!
     }
     
-    // to set height of the row
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(100.0)
-    }
     
     // to set header and footer of tables
     
@@ -66,12 +61,13 @@ extension CustomerTableViewController:UITableViewDelegate,UITableViewDataSource
     // to display selected row
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let c = DataStorage.getInstance().dictionaryToArray()
-        let sc = c[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated : true)
+        //let c = DataStorage.getInstance().dictionaryToArray()
+            //var sc = c[indexPath.row]
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        
-        let customerDetails = sb.instantiateViewController(identifier: <#T##String#>)
-        print("\(c.firstName) \(c.lastName)")
+        let detailedCustomerVC = sb.instantiateViewController(withIdentifier: "detailedCustomerVC") as! DetailedCustomerViewController
+        self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
+       
     }
 }
        

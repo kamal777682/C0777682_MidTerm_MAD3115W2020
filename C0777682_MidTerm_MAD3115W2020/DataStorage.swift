@@ -14,11 +14,7 @@ class DataStorage
     private  static let instance =  DataStorage()
     lazy var customerList = Dictionary<String, Customer>()
     
-    var c1 = (Customer(customerId: "C001", firstName: "Kamalpreet", lastName: "kaur", email: "kamal342@gmail.com"))
-    var c2 = (Customer(customerId: "C002", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu12@yahoo.com"))
-    var c3 = (Customer(customerId: "C003", firstName: "Jyoti", lastName: "Thomas", email: "JyotiThomas@gmail.com"))
-    var c4 = (Customer(customerId: "C004", firstName: "Charmi", lastName: "Patel", email: "Charmi56@yahoo.com"))
-    var c5 = (Customer(customerId: "C005", firstName: "Avni", lastName: "Patel", email: "Avnip@gmail.com"))
+    
     
     private init(){}
     
@@ -36,21 +32,14 @@ class DataStorage
     
     func loadCustomerDetails()
     {
-        addCustomer(customer: c1)
-        addCustomer(customer: c2)
-        addCustomer(customer: c3)
-        addCustomer(customer: c4)
-        addCustomer(customer: c5)
+        customerList.updateValue(Customer(customerId: "C001", firstName: "Kamalpreet", lastName: "kaur", email: "kamal342@gmail.com"),forKey: "C001")
+        customerList.updateValue(Customer(customerId: "C002", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"),forKey: "C002")
+        customerList.updateValue(Customer(customerId: "C003 ", firstName: "Jyoti", lastName: "Thomas", email: "Jthomas@yahho.com"),forKey: "C003")
+        customerList.updateValue(Customer(customerId: "C004", firstName: "Charmi", lastName: "Patel", email: "Charmi56@yahoo.com"), forKey: "C004")
     }
     
     func dictionaryToArray() -> [Customer]
     {
-        var cDictionary : [Customer] = []
-        
-        for i in cDictionary
-        {
-            cDictionary.append(i.value)
-        }
-        
+        return Array(customerList.values)
     }
 }

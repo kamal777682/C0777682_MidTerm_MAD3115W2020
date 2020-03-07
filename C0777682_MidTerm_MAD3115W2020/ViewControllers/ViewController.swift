@@ -36,8 +36,8 @@ class ViewController: UIViewController {
              if(txtEmail.text?.isValidEmail() == true && txtPassword.text != "")
              {
                  let sb = UIStoryboard(name : "Main",bundle:  nil)
-                 let customerVC = sb.instantiateViewController(withIdentifier: "customerVC") as! CustomerTableViewController
-                 self.navigationController?.pushViewController(customerVC, animated: true)
+                 let customerListVC = sb.instantiateViewController(withIdentifier: "customerListVC") as! CustomerListViewController
+                 self.navigationController?.pushViewController(customerListVC, animated: true)
             }
             else
              {
