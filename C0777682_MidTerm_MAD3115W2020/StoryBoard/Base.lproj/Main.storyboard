@@ -42,17 +42,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="nEo-Ic-EuY">
                         <barButtonItem key="rightBarButtonItem" title="Login" id="SEu-1C-bjr">
                             <connections>
-                                <segue destination="Uol-d6-xpt" kind="show" id="0Ha-Rz-sdB"/>
+                                <action selector="btnLogin:" destination="BYZ-38-t0r" id="DEJ-rz-fet"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnSwitch" destination="ccg-3y-35F" id="Xy3-mM-Yxp"/>
                         <outlet property="txtEmail" destination="1u8-1Q-Db0" id="czf-LV-sZw"/>
                         <outlet property="txtPassword" destination="00E-qD-GZF" id="3NL-Ks-9me"/>
+                        <segue destination="ozl-hi-Ccz" kind="show" id="aXv-uC-R68"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -60,42 +63,38 @@
             <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
         </scene>
         <!--Customer Table View Controller-->
-        <scene sceneID="7H5-Nz-Nhn">
+        <scene sceneID="bDs-do-FXj">
             <objects>
-                <viewController id="Uol-d6-xpt" customClass="CustomerTableViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yMo-HV-w1e">
+                <viewController storyboardIdentifier="customerVC" id="ozl-hi-Ccz" customClass="CustomerTableViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="20" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="78b-Ui-Gtm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rBx-6c-WcF">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ZGt-WR-qaP">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZGt-WR-qaP" id="JY8-1O-peW">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="rBx-6c-WcF" firstAttribute="top" secondItem="fz5-P8-g5F" secondAttribute="top" id="Zfv-vb-Svr"/>
-                            <constraint firstItem="fz5-P8-g5F" firstAttribute="bottom" secondItem="rBx-6c-WcF" secondAttribute="bottom" id="bnK-oD-woE"/>
-                            <constraint firstItem="fz5-P8-g5F" firstAttribute="trailing" secondItem="rBx-6c-WcF" secondAttribute="trailing" id="pcd-1p-BAa"/>
-                            <constraint firstItem="rBx-6c-WcF" firstAttribute="leading" secondItem="fz5-P8-g5F" secondAttribute="leading" id="vgg-4i-qBX"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="fz5-P8-g5F"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Lu8-kM-8jh"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Wpi-zj-cHv">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wpi-zj-cHv" id="EM5-Kf-PIC">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="3h6-7t-bME">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="nAY-1F-F4s">
+                            <connections>
+                                <action selector="btnLogout:" destination="ozl-hi-Ccz" id="9FQ-kC-jJj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="gRt-Y2-KIH"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4yL-RY-MCs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fOg-58-P75" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1753" y="136"/>
+            <point key="canvasLocation" x="1841" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wdQ-jK-zks">
