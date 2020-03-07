@@ -88,13 +88,44 @@
                                 <action selector="btnLogout:" destination="ozl-hi-Ccz" id="9FQ-kC-jJj"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="gRt-Y2-KIH"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="gRt-Y2-KIH">
+                            <connections>
+                                <segue destination="FIm-Wn-zbA" kind="show" id="0QB-xX-xPR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOg-58-P75" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1841" y="138"/>
+        </scene>
+        <!--Add New Customer View Controller-->
+        <scene sceneID="As2-yr-xBo">
+            <objects>
+                <viewController storyboardIdentifier="addCustVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FIm-Wn-zbA" customClass="AddNewCustomerViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="addCustVC" id="eAH-gP-qcP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eIU-p7-eto"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pgi-iv-oQq">
+                        <barButtonItem key="leftBarButtonItem" title="Customers" id="Pk0-Qz-D0h">
+                            <connections>
+                                <action selector="btnCustDetails:" destination="FIm-Wn-zbA" id="FKn-sC-HyE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="2aq-ly-zhZ">
+                            <connections>
+                                <action selector="btlLogout:" destination="FIm-Wn-zbA" id="bwT-g8-hVQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jJn-dT-3JW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2604" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wdQ-jK-zks">

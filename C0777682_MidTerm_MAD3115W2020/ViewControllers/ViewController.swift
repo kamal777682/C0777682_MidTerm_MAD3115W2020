@@ -47,21 +47,5 @@ class ViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
             }
         }
-      /*  if (txtEmail.text == "kamal1342@gmail.com" && txtPassword.text == "kamal")
-        {
-            if(txtEmail.text?.isValidEmail() == true && txtPassword.text == "Kamal")
-            {
-                let sb = UIStoryboard(name : "Main",bundle:  nil)
-                let customerVC = sb.instantiateViewController(withIdentifier: "customerVC")
-                self.navigationController?.pushViewController(customerVC, animated: true)
-            }
-            else
-            {
-                let alertController = UIAlertController(title: "LOGIN FAILED", message:
-                               "Enter a Valid Email and Password", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-                self.present(alertController, animated: true, completion: nil)
-            }
-        }*/
     }
 }

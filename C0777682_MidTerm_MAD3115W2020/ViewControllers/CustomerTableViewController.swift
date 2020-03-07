@@ -14,9 +14,9 @@ class CustomerTableViewController: UIViewController
     override func viewDidLoad() {
     super.viewDidLoad()
         
-        self.navigationController?.hidesBarsOnTap = true
+       // self.navigationController?.hidesBarsOnTap = true
         //Hide Back Button from navigation Bar
-        self.navigationItem.hidesBackButton = true
+        //self.navigationItem.hidesBackButton = true
         
 }
 
