@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <connections>
-                                <segue destination="LXV-o9-Oed" kind="show" id="kbA-EV-y7Q"/>
+                                <segue destination="Iyw-XE-zKm" kind="show" id="533-r4-npg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -67,24 +67,34 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
         </scene>
-        <!--Second View Controller-->
-        <scene sceneID="Jid-ui-hIK">
+        <!--Customer Table View Controller-->
+        <scene sceneID="X0z-Bf-mdU">
             <objects>
-                <viewController id="LXV-o9-Oed" customClass="SecondViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WxE-72-Ceg">
+                <tableViewController id="Iyw-XE-zKm" customClass="CustomerTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y40-0v-fWf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="0kD-Mu-4Y2"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="IqY-e3-EtZ">
-                        <barButtonItem key="backBarButtonItem" title="Logout" id="TXQ-wg-1Ix"/>
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="7wv-bB-eMN"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DO8-Xh-od5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FVk-1q-qOZ">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FVk-1q-qOZ" id="UUv-Tg-Rq0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Iyw-XE-zKm" id="nlb-wt-oS2"/>
+                            <outlet property="delegate" destination="Iyw-XE-zKm" id="BDu-jf-dWU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Fps-HV-Qog"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="twE-Qs-rgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1977" y="138"/>
+            <point key="canvasLocation" x="1881" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wdQ-jK-zks">
