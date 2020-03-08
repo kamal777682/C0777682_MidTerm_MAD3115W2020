@@ -23,11 +23,20 @@ class DetailedCustomerViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.title = "DETAILED CUSTOMER VIEW"
+        self.title = "Customer Details"
         self.txtCustomerID.text = customer?.customerId
         self.txtCustomerFName.text = customer?.firstName
         self.txtCustomerLName.text = customer?.lastName
         self.txtEmail.text = customer?.email
+    }
+    
+    @IBAction func btnCustomers(_ sender: UIBarButtonItem) {
+          let customerListVC = self.navigationController?.viewControllers[1] as! CustomerListViewController
+              self.navigationController?.popToViewController(customerListVC, animated: true)
+        
+    }
+    @IBAction func btnLogout(_ sender: UIBarButtonItem) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 
