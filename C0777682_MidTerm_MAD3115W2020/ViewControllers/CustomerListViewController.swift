@@ -21,6 +21,7 @@ class CustomerListViewController: UIViewController
         
         customerName = DataStorage.getInstance().dictionaryToArray()
         
+        self.title = "Customers"
         
        // self.navigationController?.hidesBarsOnTap = true
         //Hide Back Button from navigation Bar
@@ -51,13 +52,7 @@ extension CustomerListViewController:UITableViewDelegate,UITableViewDataSource
             
         return cell!
     }
-    
-    
-    // to set header and footer of tables
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Customer Name"
-    }
+  
     
     // to display selected row
     

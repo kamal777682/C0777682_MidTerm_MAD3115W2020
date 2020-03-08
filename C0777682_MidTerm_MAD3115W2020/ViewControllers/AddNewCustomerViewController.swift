@@ -69,8 +69,8 @@ class AddNewCustomerViewController: UIViewController{
                 DataStorage.getInstance().addCustomer(customer: Customer(customerId: txtCustomerID.text ?? "", firstName: txtCustomeFName.text ?? "", lastName: txtCustomerLName.text ?? "", email: txtCustomerEmail.text ?? ""))
                 let alertController = UIAlertController(title: "Saved", message:
                   "New Customer created", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-                self.present(alertController, animated: true, completion: nil)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default))
+               // self.present(alertController, animated: true, completion: nil)
         
                  let sb = UIStoryboard(name: "Main", bundle: nil)
                 let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
@@ -81,10 +81,12 @@ class AddNewCustomerViewController: UIViewController{
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
                 self.present(alertController, animated: true, completion: nil)
               }
-            self.navigationController?.popViewController(animated: true)               }
+          //  self.navigationController?.popToRootViewController(animated: true)
+            
+        }
          
-           }
-  
-   
-
+    }
 }
+
+
+
