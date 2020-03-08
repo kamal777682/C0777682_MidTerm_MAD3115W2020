@@ -63,10 +63,11 @@ extension CustomerListViewController:UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated : true)
-        //let c = DataStorage.getInstance().dictionaryToArray()
-            //var sc = c[indexPath.row]
+        let c = DataStorage.getInstance().dictionaryToArray()
+        let sc = c[indexPath.row]
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let detailedCustomerVC = sb.instantiateViewController(withIdentifier: "detailedCustomerVC") as! DetailedCustomerViewController
+        detailedCustomerVC.customer =  sc
         self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
        
     }

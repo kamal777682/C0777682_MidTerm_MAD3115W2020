@@ -34,19 +34,23 @@ class ViewController: UIViewController {
     {
         if sender.tag == 0
         {
-             if(txtEmail.text?.isValidEmail() == true && txtPassword.text != "")
-             {
+            if (txtEmail.text == "kamal1342@gmail.com" && txtPassword.text == "kamal")
+              {
+                if(txtEmail.text?.isValidEmail() == true && txtPassword.text != "")
+                {
                  let sb = UIStoryboard(name : "Main",bundle:  nil)
                  let customerListVC = sb.instantiateViewController(withIdentifier: "customerListVC") as! CustomerListViewController
                  self.navigationController?.pushViewController(customerListVC, animated: true)
+                }
             }
-            else
-             {
+                else
+                {
                 let alertController = UIAlertController(title: "Login Failed" , message:
                 "Enter a valid Email", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
                 self.present(alertController, animated: true, completion: nil)
+                }
             }
         }
     }
-}
+
