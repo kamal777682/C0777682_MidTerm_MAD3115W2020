@@ -36,7 +36,7 @@ class AddNewCustomerViewController: UIViewController{
     
     @IBAction func btnSaveCustomer(_ sender: UIBarButtonItem) {
         
-          self.navigationController?.popViewController(animated: true)
+          //self.navigationController?.popViewController(animated: true)
           if ((txtCustomerID.text == "" && txtCustomeFName.text == "") && (txtCustomerLName.text == "" && txtCustomerEmail.text == ""))
           {
               let alertController = UIAlertController(title: "Failed", message:
@@ -75,15 +75,14 @@ class AddNewCustomerViewController: UIViewController{
                  let sb = UIStoryboard(name: "Main", bundle: nil)
                 let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
                 navigationController?.pushViewController(customerListVC, animated: true)
-                
-              }else{
+                           }else{
                 let alertController = UIAlertController(title: "Failed", message:
                   "Enter valid email", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
                 self.present(alertController, animated: true, completion: nil)
               }
-            }
-        
+            self.navigationController?.popViewController(animated: true)               }
+         
            }
   
    

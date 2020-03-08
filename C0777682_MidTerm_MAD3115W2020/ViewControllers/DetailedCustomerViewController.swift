@@ -19,6 +19,7 @@ class DetailedCustomerViewController: UIViewController {
         super.viewDidLoad()
         self.title = "DETAILED CUSTOMER VIEW"
     }
+    
 
        
 
