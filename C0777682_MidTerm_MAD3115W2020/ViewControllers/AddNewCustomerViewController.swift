@@ -10,8 +10,11 @@ import UIKit
 
 class AddNewCustomerViewController: UIViewController{
 
-      @IBOutlet var txtCustomerID: UITextField!
-      @IBOutlet var txtCustomeFName: UITextField!
+    
+     var customer : Customer?
+    
+     @IBOutlet var txtCustomerID: UITextField!
+     @IBOutlet var txtCustomeFName: UITextField!
       
       @IBOutlet var txtCustomerLName: UITextField!
       
@@ -32,7 +35,8 @@ class AddNewCustomerViewController: UIViewController{
     
     
     @IBAction func btnSaveCustomer(_ sender: UIBarButtonItem) {
-        self.navigationController?.popViewController(animated: true)
+        
+          self.navigationController?.popViewController(animated: true)
           if ((txtCustomerID.text == "" && txtCustomeFName.text == "") && (txtCustomerLName.text == "" && txtCustomerEmail.text == ""))
           {
               let alertController = UIAlertController(title: "Failed", message:
@@ -75,8 +79,9 @@ class AddNewCustomerViewController: UIViewController{
                 self.present(alertController, animated: true, completion: nil)
               }
             }
-    }
-    
+        
+           }
+  
    
 
 }
