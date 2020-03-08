@@ -26,12 +26,13 @@ class CustomerListViewController: UIViewController
         //Hide Back Button from navigation Bar
         //self.navigationItem.hidesBackButton = true
 
+    }
     @IBAction func btnLogout(_ sender: UIBarButtonItem)
     {
         self.navigationController?.popViewController(animated: true)
     }
 }
-}
+
 extension CustomerListViewController:UITableViewDelegate,UITableViewDataSource
 {
     func numberOfSections(in tableView: UITableView) -> Int {

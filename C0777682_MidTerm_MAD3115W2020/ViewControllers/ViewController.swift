@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet var btnSwitch: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.title = "SIGN IN"
+    
     }
     
     override func viewWillAppear(_ animated: Bool)
