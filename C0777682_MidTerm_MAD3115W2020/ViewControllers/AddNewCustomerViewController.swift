@@ -22,7 +22,7 @@ class AddNewCustomerViewController: UIViewController{
       @IBOutlet var txtCustomerEmail: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewDidAppear(true)
+       // viewDidAppear(true)
     }
     
     @IBAction func btnCustDetails(_ sender: UIBarButtonItem)
