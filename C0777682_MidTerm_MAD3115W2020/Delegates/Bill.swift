@@ -14,7 +14,7 @@ enum BillType {
     case Hydro
 }
 
-class Bill : IDisplay
+class Bill 
 {
     var billId :  String
     var billDate : String

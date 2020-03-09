@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Mobile
+class Mobile :Bill
 {
     var manufacturerName : String
     var mobileNumber : String
@@ -29,3 +29,4 @@ class Mobile
         self.internetRate = internetRate
         super.init(billId: billId, billDate : billDate, billType: billType)
     }
+}
