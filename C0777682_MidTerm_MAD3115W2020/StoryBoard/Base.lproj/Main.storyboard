@@ -288,9 +288,10 @@
                                 <action selector="btnCustomers:" destination="M2K-PS-ePG" id="EWN-kc-H16"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="WkY-uR-hwY">
+                        <barButtonItem key="rightBarButtonItem" title="Add New Bill" id="WkY-uR-hwY">
                             <connections>
-                                <action selector="btnLogout:" destination="M2K-PS-ePG" id="egg-M9-LA8"/>
+                                <action selector="btnAddBill:" destination="M2K-PS-ePG" id="kcz-Fx-Oaj"/>
+                                <segue destination="6h5-b3-qpC" kind="show" id="4Bw-8c-AOm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -304,6 +305,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRk-Zl-wBV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2847.826086956522" y="515.625"/>
+        </scene>
+        <!--New Bill-->
+        <scene sceneID="AGS-zz-Du4">
+            <objects>
+                <viewController id="6h5-b3-qpC" customClass="AddNewBillViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iKj-AE-jHE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="GhT-6b-zvJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Bill" id="qeC-W6-2C0">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="gnb-1j-sgL"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hav-tk-Fgp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3659" y="512"/>
         </scene>
     </scenes>
 </document>

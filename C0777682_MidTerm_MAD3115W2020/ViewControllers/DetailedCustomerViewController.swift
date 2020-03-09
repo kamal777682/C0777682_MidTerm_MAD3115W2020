@@ -35,11 +35,10 @@ class DetailedCustomerViewController: UIViewController
               self.navigationController?.popToViewController(customerListVC, animated: true)
         
     }
-    @IBAction func btnLogout(_ sender: UIBarButtonItem) {
-        self.navigationController?.popToRootViewController(animated: true)
-    }
     
 
+    @IBAction func btnAddBill(_ sender: UIBarButtonItem) {
+    }
     
 
        
