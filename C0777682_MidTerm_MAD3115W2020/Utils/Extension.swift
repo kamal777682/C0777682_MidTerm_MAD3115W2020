@@ -40,3 +40,29 @@ extension Int{
         return time
     }
 }
+
+
+extension Double
+{
+    func cur() ->String
+    {
+        let cur = String.init(format: "$%.2f",self)
+        return cur
+    }
+    
+    func curPerGB()->String
+    {
+        let cur_per_GB = String.init(format: "$%.2f/GB",self)
+        return cur_per_GB
+    }
+    func curPerMin()-> String
+    {
+        let cur_per_min = String.init(format : "$%.2f/min",self)
+        return cur_per_min
+    }
+    func curPerUnit()-> String
+    {
+        let cur_per_unit = String.init(format : "$%.2f/unit",self)
+        return cur_per_unit
+    }
+}
