@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Mobile :Bill
+class Mobile : Bill
 {
     var manufacturerName : String
     var mobileNumber : String
@@ -29,4 +29,24 @@ class Mobile :Bill
         self.internetRate = internetRate
         super.init(billId: billId, billDate : billDate, billType: billType)
     }
-}
+    override func display()
+    {
+        super.display()
+        print("Manufacturer Name    : \(manufacturerName)")
+        print("Mobile NUmber        : \(mobileNumber)")
+        print("Mobile Plan          : \(mobilePlan)")
+        print("Internet Used (GB)   : \(internetGBUsed.dataUsed())")
+        print("Internet Rate        : \(internetRate.curPerGB())")
+        print("Talk Minutes         : \(minuteUsed.timeInMinutes())")
+        print("Minutes  rate        : \(planRate.curPerMin())")
+        print("MOBILE Bill Amount   : \(calculateTotalBill().cur())")
+    }
+    
+    func calculateTotalBill()->Double
+    {
+        let internetbill = Double(self.internetGBUsed) * self.internetRate
+        let mobilebill = Double(self.minuteUsed) * self.planRate
+        totalBill = (internetbill + mobilebill)
+        return totalBill
+    }
+    
