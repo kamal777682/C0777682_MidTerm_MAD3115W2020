@@ -21,6 +21,8 @@
 		9B408D7924144D06008FA112 /* DetailedCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B408D7824144D06008FA112 /* DetailedCustomerViewController.swift */; };
 		9BC662D92416F07900D82695 /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC662D82416F07900D82695 /* Hydro.swift */; };
 		9BC662DB2416F0E200D82695 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC662DA2416F0E200D82695 /* Internet.swift */; };
+		9BC662DD2416F13600D82695 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC662DC2416F13600D82695 /* Mobile.swift */; };
+		9BC662DF2416F16300D82695 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC662DE2416F16300D82695 /* Bill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		9B408D7824144D06008FA112 /* DetailedCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCustomerViewController.swift; sourceTree = "<group>"; };
 		9BC662D82416F07900D82695 /* Hydro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
 		9BC662DA2416F0E200D82695 /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		9BC662DC2416F13600D82695 /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
+		9BC662DE2416F16300D82695 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 				9B1D606C2413082700101427 /* SceneDelegate.swift */,
 				9BC662D82416F07900D82695 /* Hydro.swift */,
 				9BC662DA2416F0E200D82695 /* Internet.swift */,
+				9BC662DC2416F13600D82695 /* Mobile.swift */,
+				9BC662DE2416F16300D82695 /* Bill.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -197,6 +203,7 @@
 				9BC662D92416F07900D82695 /* Hydro.swift in Sources */,
 				9B408D7924144D06008FA112 /* DetailedCustomerViewController.swift in Sources */,
 				9B1D606F2413082700101427 /* ViewController.swift in Sources */,
+				9BC662DD2416F13600D82695 /* Mobile.swift in Sources */,
 				9B1D60AD2413238E00101427 /* Customers.swift in Sources */,
 				9B1D606B2413082700101427 /* AppDelegate.swift in Sources */,
 				9BC662DB2416F0E200D82695 /* Internet.swift in Sources */,
@@ -205,6 +212,7 @@
 				9B352548241431CA00EB3875 /* AddNewCustomerViewController.swift in Sources */,
 				9B1D606D2413082700101427 /* SceneDelegate.swift in Sources */,
 				9B1D607F24130D0F00101427 /* Extension.swift in Sources */,
+				9BC662DF2416F16300D82695 /* Bill.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
