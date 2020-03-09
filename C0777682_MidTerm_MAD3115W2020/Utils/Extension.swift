@@ -24,4 +24,19 @@ extension String
           let testPhone = NSPredicate(format:"SELF MATCHES %@", regularExpressionForPhone)
           return testPhone.evaluate(with: self)
     }
+    
+    
+}
+
+extension Int{
+    func dataUsed () -> String{
+        let data = String.init(format : "%i GB",self)
+        return data
+    }
+     
+    func timeInMinutes() -> String
+    {
+        let time = String.init(format: "%i min",self)
+        return time
+    }
 }
