@@ -183,14 +183,11 @@
                         <viewLayoutGuide key="safeArea" id="eIU-p7-eto"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Customer" id="Pgi-iv-oQq">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Add New Bill" id="WkY-uR-hwY"/>
-                            <barButtonItem title="Save" id="2aq-ly-zhZ">
-                                <connections>
-                                    <action selector="btnSaveCustomer:" destination="FIm-Wn-zbA" id="8Pj-t9-PiG"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Add New Bill" id="WkY-uR-hwY">
+                            <connections>
+                                <segue destination="6h5-b3-qpC" kind="show" id="Wmg-SD-oIC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="txtCustomeFName" destination="NMB-8g-pft" id="aTi-4o-nf1"/>
@@ -276,9 +273,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAS-QN-Xy7">
-                                <rect key="frame" x="175" y="460" width="65" height="30"/>
+                                <rect key="frame" x="175" y="460" width="103" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="View Bills"/>
+                                <connections>
+                                    <action selector="btnViewBills:" destination="M2K-PS-ePG" eventType="touchUpInside" id="CXM-tc-tT7"/>
+                                    <segue destination="wyK-X4-d7Y" kind="show" id="GGm-aY-1ei"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xGK-ix-0gz">
                                 <rect key="frame" x="136" y="151" width="194" height="34"/>
@@ -308,18 +309,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRk-Zl-wBV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2848" y="466"/>
+            <point key="canvasLocation" x="2847.826086956522" y="465.40178571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--View Bills View Contoller-->
         <scene sceneID="mAo-Wl-pfJ">
             <objects>
-                <viewController id="wyK-X4-d7Y" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewBillVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wyK-X4-d7Y" customClass="ViewBillsViewContoller" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N2d-hc-7zh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="nk0-O1-pvH"/>
                     </view>
+                    <navigationItem key="navigationItem" id="M6J-9g-Vr9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLy-FF-7jP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

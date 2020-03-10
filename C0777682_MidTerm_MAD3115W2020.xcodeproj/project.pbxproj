@@ -17,6 +17,7 @@
 		9B1D60A924131E8500101427 /* CustomerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1D60A824131E8500101427 /* CustomerListViewController.swift */; };
 		9B1D60AB2413219200101427 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1D60AA2413219200101427 /* DataStorage.swift */; };
 		9B1D60AD2413238E00101427 /* Customers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1D60AC2413238E00101427 /* Customers.swift */; };
+		9B20FDC92418299F00DF6A8D /* ViewBillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B20FDC82418299F00DF6A8D /* ViewBillsViewController.swift */; };
 		9B352548241431CA00EB3875 /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B352547241431CA00EB3875 /* AddNewCustomerViewController.swift */; };
 		9B408D7924144D06008FA112 /* DetailedCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B408D7824144D06008FA112 /* DetailedCustomerViewController.swift */; };
 		9BC662D92416F07900D82695 /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC662D82416F07900D82695 /* Hydro.swift */; };
@@ -39,6 +40,7 @@
 		9B1D60A824131E8500101427 /* CustomerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewController.swift; sourceTree = "<group>"; };
 		9B1D60AA2413219200101427 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		9B1D60AC2413238E00101427 /* Customers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customers.swift; sourceTree = "<group>"; };
+		9B20FDC82418299F00DF6A8D /* ViewBillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBillsViewController.swift; sourceTree = "<group>"; };
 		9B352547241431CA00EB3875 /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
 		9B408D7824144D06008FA112 /* DetailedCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCustomerViewController.swift; sourceTree = "<group>"; };
 		9BC662D82416F07900D82695 /* Hydro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				9B352547241431CA00EB3875 /* AddNewCustomerViewController.swift */,
 				9B408D7824144D06008FA112 /* DetailedCustomerViewController.swift */,
 				9BC662E12416F57B00D82695 /* AddNewBillViewController.swift */,
+				9B20FDC82418299F00DF6A8D /* ViewBillsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				9BC662DB2416F0E200D82695 /* Internet.swift in Sources */,
 				9B1D60A924131E8500101427 /* CustomerListViewController.swift in Sources */,
 				9B1D60AB2413219200101427 /* DataStorage.swift in Sources */,
+				9B20FDC92418299F00DF6A8D /* ViewBillsViewController.swift in Sources */,
 				9B352548241431CA00EB3875 /* AddNewCustomerViewController.swift in Sources */,
 				9B1D606D2413082700101427 /* SceneDelegate.swift in Sources */,
 				9B1D607F24130D0F00101427 /* Extension.swift in Sources */,
