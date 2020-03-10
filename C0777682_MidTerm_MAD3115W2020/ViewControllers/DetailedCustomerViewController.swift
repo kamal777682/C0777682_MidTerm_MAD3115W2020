@@ -8,9 +8,10 @@
 
 import UIKit
 
-class DetailedCustomerViewController: UIViewController
+class DetailedCustomerViewController: UIViewController, UITextFieldDelegate
 {
     var customer : Customer?
+    
     
     @IBOutlet var txtCustomerID: UITextField!
     
@@ -38,7 +39,13 @@ class DetailedCustomerViewController: UIViewController
     
 
     @IBAction func btnAddBill(_ sender: UIBarButtonItem) {
+        
     }
+   
+      
+    
+     
+       
     
 
        

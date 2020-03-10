@@ -19,36 +19,21 @@ class Bill
     var billId :  String
     var billDate : String
     var billType : BillType
-    var totalBill :  Double = 0.0
-    
+    var totalBillAmount : Double = 0.0
        
-    init(billId : String,billDate : String,billType : BillType)//totalBill :  Double)
-    {
+ init(billId : String,billDate : String,billType : BillType)
+ {
         self.billId = billId
         self.billDate = billDate
         self.billType = billType
-        //self.totalBill = totalBill
-      
-    }
+}
    
-    func display()
+func display()
     {
         print("BIll Id              : \(self.billId)")
-        print("Bill Date            : \(self.dateFormat(string: billDate))")
+        print("Bill Date            : \(self.billDate)")
         print("Bill Type            : \(self.billType)")
       
     }
     
-    func dateFormat(string : String)-> String
-        
-    {
-        let getdate = DateFormatter()
-        getdate.dateFormat = "dd/MM/yyyy"
-        
-        let setdate = DateFormatter()
-        setdate.dateFormat = "EEEE,d MMMM ,yyyy"
-        let date : Date? =  getdate.date(from: billDate)
-        return setdate.string(from: date!)
-          
-    }
 }
