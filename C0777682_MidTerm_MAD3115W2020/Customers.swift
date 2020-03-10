@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Customer : Bill
+class Customer
 {
    
     var customerId : String
@@ -28,7 +28,7 @@ class Customer : Bill
          
     }
      
-    func addBill(bill : Bill)
+   /* func addBill(bill : Bill)
     {
         let billId = bill.billId
         bills.updateValue(bill, forKey: billId)
@@ -45,6 +45,6 @@ class Customer : Bill
                totalBillAmount = totalBillAmount + i.value.totalBill
            }
            return totalBillAmount
-         }
+         }*/
     
 }
