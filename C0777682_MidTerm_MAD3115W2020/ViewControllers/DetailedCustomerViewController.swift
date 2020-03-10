@@ -35,7 +35,7 @@ class DetailedCustomerViewController: UIViewController, UITextFieldDelegate
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let viewBillVC = sb.instantiateViewController(withIdentifier: "viewBillVC" ) as! ViewBillsViewController
-        self.navigationController?.pushViewController(viewBillVC, animated: true)        
+        self.navigationController?.pushViewController(viewBillVC, animated: true)
     }
     @IBAction func btnCustomers(_ sender: UIBarButtonItem) {
           let customerListVC = self.navigationController?.viewControllers[1] as! CustomerListViewController

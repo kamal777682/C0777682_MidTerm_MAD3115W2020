@@ -23,14 +23,6 @@ class Internet : Bill
         super.init(billId: billId, billDate: billDate, billType: billType)
     }
     
-    override func display()
-    {
-        super.display()
-        print("Internet Provider    : \(internetProvider)")
-        print("Internet Rate        : \(internetRate.curPerGB())")
-        print("Internet Used        : \(internetGBUsed)GB")
-        print("INTERNET Bill Amount : \(calculateTotalBill().cur())")
-    }
    
     func calculateTotalBill() -> Double {
         totalBill = Double((self.internetGBUsed)) * self.internetRate

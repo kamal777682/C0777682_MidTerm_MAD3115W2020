@@ -28,13 +28,14 @@ class Customer
          
     }
      
-   /* func addBill(bill : Bill)
+    func addBill(bill : Bill)
     {
         let billId = bill.billId
         bills.updateValue(bill, forKey: billId)
     }
     func removeBill(bill : Bill)
     {
+        let billId = bill.billId
         bills.removeValue(forKey: billId)
     }
     
@@ -45,6 +46,6 @@ class Customer
                totalBillAmount = totalBillAmount + i.value.totalBill
            }
            return totalBillAmount
-         }*/
+         }
     
 }

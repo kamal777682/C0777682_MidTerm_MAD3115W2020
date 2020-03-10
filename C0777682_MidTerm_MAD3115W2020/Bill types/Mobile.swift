@@ -29,18 +29,7 @@ class Mobile : Bill
         self.internetRate = internetRate
         super.init(billId: billId, billDate : billDate, billType: billType)
     }
-    override func display()
-    {
-        super.display()
-        print("Manufacturer Name    : \(manufacturerName)")
-        print("Mobile NUmber        : \(mobileNumber)")
-        print("Mobile Plan          : \(mobilePlan)")
-        print("Internet Used (GB)   : \(internetGBUsed.dataUsed())")
-        print("Internet Rate        : \(internetRate.curPerGB())")
-        print("Talk Minutes         : \(minuteUsed.timeInMinutes())")
-        print("Minutes  rate        : \(planRate.curPerMin())")
-        print("MOBILE Bill Amount   : \(calculateTotalBill().cur())")
-    }
+
     
     func calculateTotalBill()->Double
     {

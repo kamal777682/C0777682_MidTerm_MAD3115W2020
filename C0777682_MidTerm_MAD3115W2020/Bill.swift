@@ -27,13 +27,5 @@ class Bill
         self.billDate = billDate
         self.billType = billType
 }
-   
-func display()
-    {
-        print("BIll Id              : \(self.billId)")
-        print("Bill Date            : \(self.billDate)")
-        print("Bill Type            : \(self.billType)")
-      
-    }
-    
+
 }

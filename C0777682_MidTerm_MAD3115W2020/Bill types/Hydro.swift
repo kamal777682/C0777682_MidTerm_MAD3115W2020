@@ -22,14 +22,6 @@ class Hydro : Bill
         super.init(billId: billId, billDate : billDate, billType: billType)
     }
     
-    override func display()
-    {
-        super.display()
-        print("Agency Name          : \(self.agencyName)")
-        print("Unit Consumed        : \(self.unitConsumed) units")
-        print("Hydro Rate Per Units : \(self.rate.curPerUnit())")
-        print("HYDRO Bill Amount    : \(self.calculateTotalBill().cur())")    }
-    
     func calculateTotalBill() -> Double
     {
         totalBill = Double(self.unitConsumed) * self.rate
