@@ -19,7 +19,7 @@ class Bill
     var billId :  String
     var billDate : String
     var billType : BillType
-    var totalBillAmount : Double = 0.0
+    var totalBill : Double = 0.0
        
  init(billId : String,billDate : String,billType : BillType)
  {
