@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BillTableViewCllTableViewCell: UITableViewCell {
+class BillTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblBillId: UILabel!
     
