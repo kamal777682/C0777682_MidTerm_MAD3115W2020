@@ -21,6 +21,9 @@ class DetailedCustomerViewController: UIViewController, UITextFieldDelegate
     
     @IBOutlet var txtEmail: UITextField!
     
+    
+    @IBOutlet weak var btnViewBills: UIButton!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -29,24 +32,27 @@ class DetailedCustomerViewController: UIViewController, UITextFieldDelegate
         self.txtCustomerFName.text = customer?.firstName
         self.txtCustomerLName.text = customer?.lastName
         self.txtEmail.text = customer?.email
-    }
-    
-    @IBAction func btnViewBills(_ sender: UIButton) {
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let viewBillVC = sb.instantiateViewController(withIdentifier: "viewBillVC" ) as! ViewBillsViewController
-        self.navigationController?.pushViewController(viewBillVC, animated: true)
-    }
-    @IBAction func btnCustomers(_ sender: UIBarButtonItem) {
-          let customerListVC = self.navigationController?.viewControllers[1] as! CustomerListViewController
-              self.navigationController?.popToViewController(customerListVC, animated: true)
         
+  
     }
     
 
-    @IBAction func btnAddBill(_ sender: UIBarButtonItem) {
-        
+
+
+  
+        @IBAction func btnCustomers(_ sender: UIBarButtonItem) {
+                let customerListVC = self.navigationController?.viewControllers[1] as! CustomerListViewController
+                    self.navigationController?.popToViewController(customerListVC, animated: true)
     }
+
+    /*  @IBAction func btnViewBills(_ sender: UIButton) {
+          
+          let sb = UIStoryboard(name: "Main", bundle: nil)
+          let viewBillVC = sb.instantiateViewController(withIdentifier: "viewBillVC" ) as! ViewBillsViewController
+        self.navigationController?.pushViewController(viewBillVC, animated: true)*/
+    }
+
    
       
     
@@ -56,4 +62,4 @@ class DetailedCustomerViewController: UIViewController, UITextFieldDelegate
 
        
 
-}
+

@@ -25,19 +25,19 @@ class Customer
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
-         
+        
     }
      
-    func addBill(bill : Bill)
-    {
-        let billId = bill.billId
-        bills.updateValue(bill, forKey: billId)
-    }
-    func removeBill(bill : Bill)
-    {
-        let billId = bill.billId
-        bills.removeValue(forKey: billId)
-    }
+   func addBill(bill :Bill,billID : String)
+       {
+           bills.updateValue(bill, forKey: billID)
+       }
+       
+       func removeBill(bill :Bill,billID : String)
+       {
+           bills.removeValue(forKey: billID)
+       }
+    
     
      func calculateTotalBill()-> Double
          {
