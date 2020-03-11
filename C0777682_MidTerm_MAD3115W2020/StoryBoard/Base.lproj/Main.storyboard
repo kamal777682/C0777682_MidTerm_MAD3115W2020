@@ -513,6 +513,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="yn1-hd-bck"/>
                     </view>
+                    <connections>
+                        <outlet property="txtBillID" destination="reL-ao-aYf" id="Nd6-oQ-YQe"/>
+                        <outlet property="txtBillType" destination="8xs-D2-hOA" id="pW0-19-rrg"/>
+                        <outlet property="txtInternetUsed" destination="tUQ-9a-S3g" id="0yw-lE-XtZ"/>
+                        <outlet property="txtManufactureName" destination="ewU-Jo-ROI" id="VcE-ez-R0b"/>
+                        <outlet property="txtMinuteUsed" destination="JIS-QX-xNA" id="wnh-pj-JKF"/>
+                        <outlet property="txtMobileNumber" destination="3ex-gE-IbE" id="V91-B4-VJm"/>
+                        <outlet property="txtMobilePlan" destination="3ex-gE-IbE" id="DLW-G3-FIb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jkt-KW-R65" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,14 @@ import UIKit
 
 class MobileBillViewController: UIViewController {
 
+    @IBOutlet var txtBillID: UIView!
+    @IBOutlet weak var txtBillType: UITextField!
+    @IBOutlet weak var txtManufactureName: UITextField!
+    @IBOutlet weak var txtMobilePlan: UITextField!
+    @IBOutlet weak var txtMobileNumber: UITextField!
+    @IBOutlet weak var txtInternetUsed: UITextField!
+    @IBOutlet weak var txtMinuteUsed: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
