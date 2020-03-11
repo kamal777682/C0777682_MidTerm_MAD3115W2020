@@ -20,7 +20,36 @@ class ViewBillsViewController: UIViewController {
         self.title = "Bill Details"
         // Do any additional setup after loading the view.
     }
+
+    @IBAction func btnAddBills(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Add new bill", message: "Select type of bill", preferredStyle: .actionSheet);
+            alert.addAction(UIAlertAction(title: "Hydro", style: .default, handler: { (action) in
+                
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let HydroBillVC = sb.instantiateViewController(identifier: "HydroBillVC") as! HydroBillViewController
+                self.navigationController?.pushViewController(HydroBillVC, animated: true)
+                
+            }));
+            alert.addAction(UIAlertAction(title: "Mobile", style: .default, handler:{ (action) in
+                
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let MobileBillVC = sb.instantiateViewController(identifier: "MobileBillVC") as! MobileBillViewController
+                self.navigationController?.pushViewController(MobileBillVC, animated: true)
+                
+            }));
+            alert.addAction(UIAlertAction(title: "Internet", style: .default, handler:{ (action) in
+                
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let InternetBillVC = sb.instantiateViewController(identifier: "InternetBillVC") as! InternetBillViewController
+                self.navigationController?.pushViewController(InternetBillVC, animated: true)
+                
+            }));
+            self.present(alert, animated: true, completion: nil);
+            
+        }
+    
 }
+
     
 extension ViewBillsViewController: UITableViewDataSource, UITableViewDelegate
     {

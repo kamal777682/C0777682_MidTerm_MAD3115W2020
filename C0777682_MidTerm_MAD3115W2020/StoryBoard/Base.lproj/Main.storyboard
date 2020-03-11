@@ -377,21 +377,24 @@
                     <navigationItem key="navigationItem" id="M6J-9g-Vr9">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="OeM-9N-86C">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BxE-8T-hnp">
-                                <rect key="frame" x="-23" y="-15" width="92" height="30"/>
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Bill"/>
                             </button>
+                            <connections>
+                                <action selector="btnAddBills:" destination="wyK-X4-d7Y" id="tUm-aA-AA2"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLy-FF-7jP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3689.8550724637685" y="464.73214285714283"/>
+            <point key="canvasLocation" x="3717" y="465"/>
         </scene>
         <!--Hydro Bill View Controller-->
         <scene sceneID="18K-ub-L8F">
             <objects>
-                <viewController id="jz3-bL-n7k" customClass="HydroBillViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HydroBillVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jz3-bL-n7k" customClass="HydroBillViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PCl-nK-cWP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -462,12 +465,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKd-VD-PZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4534.7826086956529" y="456.69642857142856"/>
+            <point key="canvasLocation" x="4526" y="457"/>
         </scene>
         <!--Mobile Bill View Controller-->
         <scene sceneID="Cr0-u4-VyW">
             <objects>
-                <viewController id="MZR-ex-vqh" customClass="MobileBillViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MobileVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MZR-ex-vqh" customClass="MobileBillViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="reL-ao-aYf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -556,7 +559,7 @@
         <!--Internet Bill View Controller-->
         <scene sceneID="kdb-nf-vw8">
             <objects>
-                <viewController id="nBa-rS-9sB" customClass="InternetBillViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InternetBillVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nBa-rS-9sB" customClass="InternetBillViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ja2-B3-nco">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
