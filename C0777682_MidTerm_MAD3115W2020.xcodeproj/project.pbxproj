@@ -129,8 +129,8 @@
 				9B1D606E2413082700101427 /* ViewController.swift */,
 				9B1D60A824131E8500101427 /* CustomerListViewController.swift */,
 				9B352547241431CA00EB3875 /* AddNewCustomerViewController.swift */,
-				9B408D7824144D06008FA112 /* DetailedCustomerViewController.swift */,
 				9BC662E12416F57B00D82695 /* AddNewBillViewController.swift */,
+				9B408D7824144D06008FA112 /* DetailedCustomerViewController.swift */,
 				9B20FDC82418299F00DF6A8D /* ViewBillsViewController.swift */,
 			);
 			path = ViewControllers;

@@ -19,7 +19,7 @@ class CustomerListViewController: UIViewController
     override func viewDidLoad() {
     super.viewDidLoad()
         
-        customerName = DataStorage.getInstance().
+        //customerName = DataStorage.getInstance().loadCustomerDetails()
         
         self.title = "Customers"
         
@@ -41,12 +41,15 @@ extension CustomerListViewController:UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return customerName.count
+        return DataStorage.getInstance().customerList.count
+        //customerName.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerName")
-        let customer = customerName[indexPath.row]
+        let customers = DataStorage.getInstance().dictionaryToArray()
+        let customer = customers[indexPath.row]
         
         cell?.textLabel?.text = customer.firstName
             
@@ -58,8 +61,8 @@ extension CustomerListViewController:UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated : true)
-        let c = DataStorage.getInstance().dictionaryToArray()
-        let sc = c[indexPath.row]
+        let customer = DataStorage.getInstance().dictionaryToArray()
+        let sc = customer[indexPath.row]
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let detailedCustomerVC = sb.instantiateViewController(withIdentifier: "detailedCustomerVC") as! DetailedCustomerViewController
         detailedCustomerVC.customer =  sc

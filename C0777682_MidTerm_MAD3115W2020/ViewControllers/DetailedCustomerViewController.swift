@@ -33,7 +33,6 @@ class DetailedCustomerViewController: UIViewController, UITextFieldDelegate
         self.txtCustomerLName.text = customer?.lastName
         self.txtEmail.text = customer?.email
         
-        
   
     }
     
@@ -45,13 +44,15 @@ class DetailedCustomerViewController: UIViewController, UITextFieldDelegate
                 let customerListVC = self.navigationController?.viewControllers[1] as! CustomerListViewController
                     self.navigationController?.popToViewController(customerListVC, animated: true)
     }
+    
 
-    /*  @IBAction func btnViewBills(_ sender: UIButton) {
+      @IBAction func btnViewBills(_ sender: UIButton) {
           
           let sb = UIStoryboard(name: "Main", bundle: nil)
           let viewBillVC = sb.instantiateViewController(withIdentifier: "viewBillVC" ) as! ViewBillsViewController
-        self.navigationController?.pushViewController(viewBillVC, animated: true)*/
-    }
+       // ViewBillsViewController.custtomerBill = self.customer
+        self.navigationController?.pushViewController(viewBillVC, animated: true)
+    
 
    
       

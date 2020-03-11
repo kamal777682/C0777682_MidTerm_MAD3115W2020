@@ -10,9 +10,11 @@ import UIKit
 
 class ViewBillsViewController: UIViewController {
 
+    var customer : Customer?
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "Bill Details"
         // Do any additional setup after loading the view.
     }
     

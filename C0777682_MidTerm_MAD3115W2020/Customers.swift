@@ -28,7 +28,7 @@ class Customer
         
     }
      
- func addBill(bill: Bill, billId: String)
+     func addBill(bill: Bill, billId: String)
        {
          bills.updateValue(bill, forKey: billId)
        }
