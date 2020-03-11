@@ -10,6 +10,10 @@ import UIKit
 
 class InternetBillViewController: UIViewController {
 
+    @IBOutlet weak var txtBillID: UITextField!
+    @IBOutlet weak var txtBillType: UITextField!
+    @IBOutlet weak var txtInternetProvider: UITextField!
+    @IBOutlet weak var txtInternetUsed: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
