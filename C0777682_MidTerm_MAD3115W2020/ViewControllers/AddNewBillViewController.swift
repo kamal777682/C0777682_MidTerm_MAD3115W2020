@@ -19,4 +19,8 @@ class AddNewBillViewController: UIViewController {
 
     /*let customerListVC = self.navigationController?.viewControllers[1] as! CustomerListViewController
           self.navigationController?.popToViewController(customerListVC, animated: true)*/
+   
+    @IBAction func btnSaveCustomer(_ sender: UIBarButtonItem)
+    {
+    }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class ViewBillsViewController: UIViewController {
 
-    var customer : Customer?
+    var customerBill : Customer?
     override func viewDidLoad() {
         super.viewDidLoad()
 

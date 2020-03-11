@@ -65,6 +65,8 @@ extension CustomerListViewController:UITableViewDelegate,UITableViewDataSource
         let sc = customer[indexPath.row]
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let detailedCustomerVC = sb.instantiateViewController(withIdentifier: "detailedCustomerVC") as! DetailedCustomerViewController
+        //let viewBillVC = sb.instantiateViewController(withIdentifier: "viewBillVC" ) as! ViewBillsViewController
+        //viewBillVC.customerBill = sc
         detailedCustomerVC.customer =  sc
         self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
        

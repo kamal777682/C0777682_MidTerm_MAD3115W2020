@@ -118,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="1840.5797101449277" y="137.94642857142856"/>
         </scene>
-        <!--Add New Customer-->
+        <!--    Add  Customer-->
         <scene sceneID="As2-yr-xBo">
             <objects>
                 <viewController storyboardIdentifier="addCustVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FIm-Wn-zbA" customClass="AddNewCustomerViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -182,9 +182,10 @@
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="eIU-p7-eto"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Customer" id="Pgi-iv-oQq">
-                        <barButtonItem key="rightBarButtonItem" title="Add New Bill" id="WkY-uR-hwY">
+                    <navigationItem key="navigationItem" title="    Add  Customer" id="Pgi-iv-oQq">
+                        <barButtonItem key="rightBarButtonItem" title="Add  Bill" id="WkY-uR-hwY">
                             <connections>
+                                <action selector="btnSaveCustomeAndAddBill:" destination="FIm-Wn-zbA" id="EeC-rb-OgM"/>
                                 <segue destination="6h5-b3-qpC" kind="show" id="Wmg-SD-oIC"/>
                             </connections>
                         </barButtonItem>
@@ -300,11 +301,11 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="btnViewBills" destination="XAS-QN-Xy7" id="ZHW-u1-BYZ"/>
                         <outlet property="txtCustomerFName" destination="IBK-bG-vFm" id="ytq-K5-UiB"/>
                         <outlet property="txtCustomerID" destination="xGK-ix-0gz" id="U99-yb-oZc"/>
                         <outlet property="txtCustomerLName" destination="Lmb-q1-KRP" id="J6L-rN-pqb"/>
                         <outlet property="txtEmail" destination="YaW-BZ-KgC" id="4Hp-v9-1hh"/>
+                        <outlet property="view" destination="gwS-UJ-fvl" id="VNK-HV-jUU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRk-Zl-wBV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -396,7 +397,11 @@
                         <viewLayoutGuide key="safeArea" id="GhT-6b-zvJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Bill" id="qeC-W6-2C0">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="gnb-1j-sgL"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="gnb-1j-sgL">
+                            <connections>
+                                <action selector="btnSaveCustomer:" destination="6h5-b3-qpC" id="jlo-nJ-fic"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hav-tk-Fgp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
