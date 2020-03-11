@@ -11,11 +11,12 @@ import UIKit
 class HydroBillViewController: UIViewController {
 
     @IBOutlet weak var txtBillId: UITextField!
+    
     @IBOutlet weak var txtBillDate: UITextField!
+    
     @IBOutlet weak var txtBillAmount: UITextField!
     @IBOutlet weak var txtAgencyName: UITextField!
     @IBOutlet weak var txtUnitConsumed: UITextField!
-   
     override func viewDidLoad() {
         super.viewDidLoad()
 
