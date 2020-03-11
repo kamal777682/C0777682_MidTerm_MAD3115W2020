@@ -16,6 +16,7 @@ class ViewBillsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.bills = (customerBill?.getBills())!
         self.title = "Bill Details"
         // Do any additional setup after loading the view.
     }
