@@ -21,6 +21,9 @@
 		9B20FDCB24183B1A00DF6A8D /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B20FDCA24183B1A00DF6A8D /* BillTableViewCell.swift */; };
 		9B352548241431CA00EB3875 /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B352547241431CA00EB3875 /* AddNewCustomerViewController.swift */; };
 		9B408D7924144D06008FA112 /* DetailedCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B408D7824144D06008FA112 /* DetailedCustomerViewController.swift */; };
+		9B72938824198EA600F66CEC /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B72938724198EA600F66CEC /* Hydro.swift */; };
+		9B72938A24198EB400F66CEC /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B72938924198EB400F66CEC /* Mobile.swift */; };
+		9B72938C24198EC500F66CEC /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B72938B24198EC500F66CEC /* Internet.swift */; };
 		9BC662DF2416F16300D82695 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC662DE2416F16300D82695 /* Bill.swift */; };
 		9BC662E22416F57B00D82695 /* AddNewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC662E12416F57B00D82695 /* AddNewBillViewController.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +45,9 @@
 		9B20FDCA24183B1A00DF6A8D /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
 		9B352547241431CA00EB3875 /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
 		9B408D7824144D06008FA112 /* DetailedCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCustomerViewController.swift; sourceTree = "<group>"; };
+		9B72938724198EA600F66CEC /* Hydro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
+		9B72938924198EB400F66CEC /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
+		9B72938B24198EC500F66CEC /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
 		9BC662DE2416F16300D82695 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		9BC662E12416F57B00D82695 /* AddNewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBillViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +91,9 @@
 				9B35254424141C7F00EB3875 /* StoryBoard */,
 				9B35254524141C9300EB3875 /* Utils */,
 				9B35254624141CB000EB3875 /* ViewControllers */,
+				9B72938724198EA600F66CEC /* Hydro.swift */,
+				9B72938924198EB400F66CEC /* Mobile.swift */,
+				9B72938B24198EC500F66CEC /* Internet.swift */,
 			);
 			path = C0777682_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -200,6 +209,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B72938A24198EB400F66CEC /* Mobile.swift in Sources */,
+				9B72938824198EA600F66CEC /* Hydro.swift in Sources */,
+				9B72938C24198EC500F66CEC /* Internet.swift in Sources */,
 				9B408D7924144D06008FA112 /* DetailedCustomerViewController.swift in Sources */,
 				9B1D606F2413082700101427 /* ViewController.swift in Sources */,
 				9B1D60AD2413238E00101427 /* Customers.swift in Sources */,

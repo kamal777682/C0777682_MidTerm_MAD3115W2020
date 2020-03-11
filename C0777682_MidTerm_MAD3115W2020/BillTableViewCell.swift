@@ -14,7 +14,8 @@ class BillTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lblBilltype: UILabel!
     
-    @IBOutlet weak var lblAgencyName: UILabel!
-    
-    @IBOutlet weak var lblUnitConsumed: UILabel!
+    @IBOutlet weak var lblBillDate: UILabel!
+  
+    @IBOutlet weak var lblBillAmount: UILabel!
+   
 }

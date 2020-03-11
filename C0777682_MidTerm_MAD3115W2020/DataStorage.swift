@@ -39,12 +39,12 @@ class DataStorage
         let c3 = Customer(customerId: "C003", firstName: "Jyoti", lastName: "Thomas", email: "jyotiT@outlook.com")
        
         
-        let i1 = Internet(billId: "I001", billDate: "20/02/2019", billType: .Internet, internetProvider: "Rogers", internetGBUsed: 10, internetRate: 4.5)
+        let i1 = Internet(billId: "I001", billDate: "20/02/2019", internetProvider: "Rogers", internetGBUsed: 10)
         
-        let i2 = Internet(billId: "I002", billDate: "14/03/2019", billType: .Internet, internetProvider: "Freedom", internetGBUsed: 5, internetRate: 3.0)
-       let h1 = Hydro(billId: "H001", billDate: "26/04/2018", billType: .Hydro,agencyName: "Planet Energy", unitConsumed: 200, rate: 0.90)
-       let h2 = Hydro(billId: "H002", billDate: "03/09/2019", billType: .Hydro, agencyName: "OntarioHydro", unitConsumed: 700, rate: 0.75)
-       let m1 = Mobile(billId: "M001", billDate: "07/09/2019", billType: .Mobile, manufacturerName: "Apple Inc.", mobileNumber: "4504500577", mobilePlan:"4.5GB + 1000 Min", internetGBUsed: 4, minuteUsed: 100, planRate: 0.95, internetRate: 5)
+        let i2 = Internet(billId: "I002", billDate: "14/03/2019", internetProvider: "Freedom", internetGBUsed: 5, internetRate: 3.0)
+       let h1 = Hydro(billId: "H001", billDate: "26/04/2018", agencyName: "Planet Energy", unitConsumed: 200, rate: 0.90)
+       let h2 = Hydro(billId: "H002", billDate: "03/09/2019", agencyName: "OntarioHydro", unitConsumed: 700, rate: 0.75)
+       let m1 = Mobile(billId: "M001", billDate: "07/09/2019", manufacturerName: "Apple Inc.", mobileNumber: "4504500577", mobilePlan:"4.5GB + 1000 Min", internetGBUsed: 4, minuteUsed: 100, planRate: 0.95, internetRate: 5)
       
         // let m2 = Mobile(billId: "M002", billDate: "08/09/2019", billType: .Mobile, manufacturerName: "Apple Inc.", mobileNumber: "78947800", mobilePlan:"4.5GB + 1000 Min", internetGBUsed: 2, minuteUsed: 200, planRate: 0.95, internetRate: 5)
         

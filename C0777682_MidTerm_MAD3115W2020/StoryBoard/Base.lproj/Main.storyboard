@@ -362,10 +362,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="lblAgencyName" destination="7rG-PO-1aS" id="5hI-fR-ASu"/>
+                                            <outlet property="lblBillAmount" destination="LQN-UC-Wpv" id="7P5-qJ-mdh"/>
+                                            <outlet property="lblBillDate" destination="7rG-PO-1aS" id="Wxi-M9-X35"/>
                                             <outlet property="lblBillId" destination="Svz-v8-lvv" id="QpU-lI-Zxv"/>
                                             <outlet property="lblBilltype" destination="Svz-v8-lvv" id="0Fa-VV-rMx"/>
-                                            <outlet property="lblUnitConsumed" destination="LQN-UC-Wpv" id="bON-9S-Z3l"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
