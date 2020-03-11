@@ -19,7 +19,7 @@ class CustomerListViewController: UIViewController
     override func viewDidLoad() {
     super.viewDidLoad()
         
-        customerName = DataStorage.getInstance().dictionaryToArray()
+        customerName = DataStorage.getInstance().
         
         self.title = "Customers"
         

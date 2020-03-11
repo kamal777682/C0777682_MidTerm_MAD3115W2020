@@ -28,16 +28,24 @@ class Customer
         
     }
      
-   func addBill(bill :Bill,billID : String)
+ func addBill(bill: Bill, billId: String)
        {
-           bills.updateValue(bill, forKey: billID)
+         bills.updateValue(bill, forKey: billId)
        }
+   
        
        func removeBill(bill :Bill,billID : String)
        {
            bills.removeValue(forKey: billID)
        }
     
+     func getBills() -> [Bill]{
+           var customerBills = [Bill]()
+           for i in bills{
+            customerBills.append(i.value)
+           }
+           return customerBills
+       }
     
      func calculateTotalBill()-> Double
          {
