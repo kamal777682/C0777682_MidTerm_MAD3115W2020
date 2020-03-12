@@ -272,20 +272,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAS-QN-Xy7">
-                                <rect key="frame" x="176" y="460" width="103" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="View Bills"/>
-                                <connections>
-                                    <segue destination="wyK-X4-d7Y" kind="show" id="4IL-38-K4a"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xGK-ix-0gz">
                                 <rect key="frame" x="136" y="151" width="194" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAS-QN-Xy7">
+                                <rect key="frame" x="156" y="450" width="103" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="View Bills"/>
+                                <connections>
+                                    <segue destination="wyK-X4-d7Y" kind="show" id="4IL-38-K4a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Foq-uJ-I8T"/>
@@ -297,6 +297,16 @@
                                 <action selector="btnCustomers:" destination="M2K-PS-ePG" id="EWN-kc-H16"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="OeM-9N-86C">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BxE-8T-hnp">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Bill"/>
+                                <connections>
+                                    <action selector="btnAddBill:" destination="M2K-PS-ePG" eventType="touchUpInside" id="5w6-Ya-Nzy"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -304,7 +314,6 @@
                         <outlet property="txtCustomerID" destination="xGK-ix-0gz" id="U99-yb-oZc"/>
                         <outlet property="txtCustomerLName" destination="Lmb-q1-KRP" id="J6L-rN-pqb"/>
                         <outlet property="txtEmail" destination="YaW-BZ-KgC" id="4Hp-v9-1hh"/>
-                        <outlet property="view" destination="gwS-UJ-fvl" id="VNK-HV-jUU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRk-Zl-wBV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -374,18 +383,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="nk0-O1-pvH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="M6J-9g-Vr9">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="OeM-9N-86C">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BxE-8T-hnp">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Bill"/>
-                            </button>
-                            <connections>
-                                <action selector="btnAddBills:" destination="wyK-X4-d7Y" id="tUm-aA-AA2"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="M6J-9g-Vr9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLy-FF-7jP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -538,11 +536,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Bill Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eM4-Z5-qHT">
+                                <rect key="frame" x="53" y="471" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="yn1-hd-bck"/>
                     </view>
                     <connections>
+                        <outlet property="txtBillDate" destination="eM4-Z5-qHT" id="63X-Bn-fVi"/>
                         <outlet property="txtBillID" destination="VqD-mf-i9h" id="Uil-Tq-dTl"/>
                         <outlet property="txtBillType" destination="8xs-D2-hOA" id="pW0-19-rrg"/>
                         <outlet property="txtInternetUsed" destination="tUQ-9a-S3g" id="0yw-lE-XtZ"/>
@@ -576,14 +581,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Internet Provider Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqE-lh-CQb">
-                                <rect key="frame" x="56" y="228" width="292" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Internet GB used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WmD-J5-GMr">
-                                <rect key="frame" x="56" y="272" width="292" height="34"/>
+                                <rect key="frame" x="56" y="311" width="292" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -596,7 +595,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Bill Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hh9-Nd-cHw">
-                                <rect key="frame" x="56" y="315" width="292" height="34"/>
+                                <rect key="frame" x="56" y="353" width="292" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -609,11 +608,24 @@
                                     <action selector="btnSaveBill:" destination="nBa-rS-9sB" eventType="touchUpInside" id="YKM-hP-hFy"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Bill Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vZw-vl-tEU">
+                                <rect key="frame" x="56" y="227" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Internet Provider Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqE-lh-CQb">
+                                <rect key="frame" x="56" y="269" width="292" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="oj2-XH-q4Y"/>
                     </view>
                     <connections>
+                        <outlet property="txtBillDate" destination="vZw-vl-tEU" id="345-B2-vu5"/>
                         <outlet property="txtBillID" destination="ikR-TC-4bY" id="Q70-ZY-Lty"/>
                         <outlet property="txtBillType" destination="gWY-GA-Z45" id="Pxw-Wl-yCx"/>
                         <outlet property="txtInternetProvider" destination="cqE-lh-CQb" id="M7n-4v-VlK"/>

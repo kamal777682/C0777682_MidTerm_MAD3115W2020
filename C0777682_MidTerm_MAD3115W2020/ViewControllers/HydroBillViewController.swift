@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HydroBillViewController: UIViewController {
+class HydroBillViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var txtBillId: UITextField!
     @IBOutlet weak var txtBillDate: UITextField!
@@ -18,8 +18,7 @@ class HydroBillViewController: UIViewController {
     @IBOutlet weak var txtUnitConsumed: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-      
+        txtBillDate.delegate = self
     }
     
     @IBAction func btnSaveBill(_ sender: UIButton) {
@@ -27,7 +26,7 @@ class HydroBillViewController: UIViewController {
     
     var datePicker : UIDatePicker!
      
-       //textField_Date.delegate = self
+    
       
      
      override func didReceiveMemoryWarning()
