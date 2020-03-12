@@ -18,13 +18,13 @@ class Bill
 {
     var billId :  String
     var billDate : String
-  
+    var billType : BillType
     var totalBill : Double = 0.0
        
- init(billId : String,billDate : String)
+    init(billId : String,billDate : String, billType : BillType)
  {
         self.billId = billId
         self.billDate = billDate
-        
+        self.billType = billType
 }
 }
