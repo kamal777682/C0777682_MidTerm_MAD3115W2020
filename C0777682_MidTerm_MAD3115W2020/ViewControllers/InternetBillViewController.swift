@@ -119,9 +119,11 @@ class InternetBillViewController: UIViewController {
         }
         else
         {
-            DataStorage.getInstance().addBill(bill: Bill()
-        let customerListVC = self.navigationController?.viewControllers[1] as! CustomerListViewController
+            DataStorage.getInstance().addBill(bill: Internet(billId: <#T##String#>, billDate: <#T##String#>, billType: <#T##<<error type>>#>, internetProvider: <#T##String#>, internetGBUsed: <#T##Int#>)
+        let customerListVC =
+            self.navigationController?.viewControllers[1] as! CustomerListViewController
                                   self.navigationController?.popToViewController(customerListVC, animated: true)    }
     
 }
 
+}
