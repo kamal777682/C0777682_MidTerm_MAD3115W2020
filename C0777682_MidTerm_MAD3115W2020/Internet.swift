@@ -9,12 +9,12 @@
 import Foundation
 class Internet : Bill{
    
-  var billType : String = "Internet"
+  
   var internetProvider : String
   var internetGBUsed : Int
-  init(billId: String, billDate: String,internetProvider : String, internetGBUsed : Int) {
+    init(billId: String, billDate: String,billType : . BillType,internetProvider : String, internetGBUsed : Int) {
     self.internetProvider = internetProvider
     self.internetGBUsed = internetGBUsed
-    super.init(billId: billId, billDate: billDate)
+        super.init(billId: billId, billDate: billDate, billType: ,Internet)
   }
 }
