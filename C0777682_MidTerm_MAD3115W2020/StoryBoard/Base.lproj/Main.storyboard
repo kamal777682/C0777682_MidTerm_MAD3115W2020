@@ -283,8 +283,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="View Bills"/>
                                 <connections>
-                                    <action selector="btnViewBills:" destination="M2K-PS-ePG" eventType="touchUpInside" id="w5t-Dk-j7y"/>
-                                    <segue destination="wyK-X4-d7Y" kind="show" id="4IL-38-K4a"/>
+                                    <segue destination="U7D-f4-LTd" kind="show" id="JkM-vV-k2z"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -321,78 +320,75 @@
             </objects>
             <point key="canvasLocation" x="2847.826086956522" y="465.40178571428567"/>
         </scene>
-        <!--View Bills View Contoller-->
-        <scene sceneID="mAo-Wl-pfJ">
+        <!--Show Bills View Controller-->
+        <scene sceneID="LBS-DL-I5T">
             <objects>
-                <viewController storyboardIdentifier="viewBillVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wyK-X4-d7Y" customClass="ViewBillsViewContoller" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="N2d-hc-7zh">
+                <viewController id="U7D-f4-LTd" customClass="ShowBillsViewController" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KZu-Hh-MQX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zcL-ck-bF2">
-                                <rect key="frame" x="0.0" y="86" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="853-KE-FV7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BIllTableViewCell" rowHeight="100" id="xfB-1d-j2F" customClass="BillTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BillTableViewCell" rowHeight="100" id="pb2-Ue-zGS" customClass="BillTableViewCell" customModule="C0777682_MidTerm_MAD3115W2020" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xfB-1d-j2F" id="GLw-3w-m1g">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pb2-Ue-zGS" id="Ucl-oa-rST">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BillType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svz-v8-lvv">
-                                                    <rect key="frame" x="72" y="29" width="51" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BIll ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enW-CJ-1rZ">
+                                                    <rect key="frame" x="73" y="18" width="63" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bill Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pB5-AZ-6eM">
-                                                    <rect key="frame" x="71" y="7" width="48" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bill Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTw-O5-zt2">
+                                                    <rect key="frame" x="73" y="40" width="63" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bill Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rG-PO-1aS">
-                                                    <rect key="frame" x="72" y="45" width="54" height="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BillType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEF-Bg-h8d">
+                                                    <rect key="frame" x="73" y="61" width="63" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bill Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQN-UC-Wpv">
-                                                    <rect key="frame" x="72" y="68" width="74" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="lblBillAmount" destination="LQN-UC-Wpv" id="7P5-qJ-mdh"/>
-                                            <outlet property="lblBillDate" destination="7rG-PO-1aS" id="Wxi-M9-X35"/>
-                                            <outlet property="lblBillId" destination="Svz-v8-lvv" id="QpU-lI-Zxv"/>
-                                            <outlet property="lblBilltype" destination="Svz-v8-lvv" id="0Fa-VV-rMx"/>
+                                            <outlet property="lblBillDate" destination="MTw-O5-zt2" id="kcq-id-7gv"/>
+                                            <outlet property="lblBillID" destination="enW-CJ-1rZ" id="KGD-zz-TB5"/>
+                                            <outlet property="lblBillType" destination="hEF-Bg-h8d" id="K8i-SI-pq5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="wyK-X4-d7Y" id="Ex4-ii-4kP"/>
-                                    <outlet property="delegate" destination="wyK-X4-d7Y" id="obg-fN-ngw"/>
+                                    <outlet property="dataSource" destination="U7D-f4-LTd" id="wUp-fQ-mjz"/>
+                                    <outlet property="delegate" destination="U7D-f4-LTd" id="AFi-r6-iHD"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="nk0-O1-pvH"/>
+                        <constraints>
+                            <constraint firstItem="853-KE-FV7" firstAttribute="top" secondItem="AHr-PY-MwM" secondAttribute="top" id="Bdp-OQ-EOY"/>
+                            <constraint firstItem="AHr-PY-MwM" firstAttribute="trailing" secondItem="853-KE-FV7" secondAttribute="trailing" id="KWi-WH-z8f"/>
+                            <constraint firstItem="853-KE-FV7" firstAttribute="leading" secondItem="AHr-PY-MwM" secondAttribute="leading" id="UWv-qr-Vyr"/>
+                            <constraint firstItem="AHr-PY-MwM" firstAttribute="bottom" secondItem="853-KE-FV7" secondAttribute="bottom" id="h4b-B7-3Jt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AHr-PY-MwM"/>
                     </view>
-                    <navigationItem key="navigationItem" id="M6J-9g-Vr9"/>
+                    <navigationItem key="navigationItem" id="N5g-Be-rFG"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lLy-FF-7jP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B11-FO-Yao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3717" y="465"/>
+            <point key="canvasLocation" x="3704" y="465"/>
         </scene>
         <!--Hydro Bill View Controller-->
         <scene sceneID="18K-ub-L8F">

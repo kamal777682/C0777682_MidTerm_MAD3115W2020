@@ -17,7 +17,7 @@
 		9B1D60A924131E8500101427 /* CustomerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1D60A824131E8500101427 /* CustomerListViewController.swift */; };
 		9B1D60AB2413219200101427 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1D60AA2413219200101427 /* DataStorage.swift */; };
 		9B1D60AD2413238E00101427 /* Customers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1D60AC2413238E00101427 /* Customers.swift */; };
-		9B20FDC92418299F00DF6A8D /* ViewBillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B20FDC82418299F00DF6A8D /* ViewBillsViewController.swift */; };
+		9B20FDC92418299F00DF6A8D /* ShowBillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B20FDC82418299F00DF6A8D /* ShowBillsViewController.swift */; };
 		9B20FDCB24183B1A00DF6A8D /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B20FDCA24183B1A00DF6A8D /* BillTableViewCell.swift */; };
 		9B352548241431CA00EB3875 /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B352547241431CA00EB3875 /* AddNewCustomerViewController.swift */; };
 		9B408D7924144D06008FA112 /* DetailedCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B408D7824144D06008FA112 /* DetailedCustomerViewController.swift */; };
@@ -43,7 +43,7 @@
 		9B1D60A824131E8500101427 /* CustomerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewController.swift; sourceTree = "<group>"; };
 		9B1D60AA2413219200101427 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		9B1D60AC2413238E00101427 /* Customers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customers.swift; sourceTree = "<group>"; };
-		9B20FDC82418299F00DF6A8D /* ViewBillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBillsViewController.swift; sourceTree = "<group>"; };
+		9B20FDC82418299F00DF6A8D /* ShowBillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBillsViewController.swift; sourceTree = "<group>"; };
 		9B20FDCA24183B1A00DF6A8D /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
 		9B352547241431CA00EB3875 /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
 		9B408D7824144D06008FA112 /* DetailedCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCustomerViewController.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 				9B1D60A824131E8500101427 /* CustomerListViewController.swift */,
 				9B352547241431CA00EB3875 /* AddNewCustomerViewController.swift */,
 				9B408D7824144D06008FA112 /* DetailedCustomerViewController.swift */,
-				9B20FDC82418299F00DF6A8D /* ViewBillsViewController.swift */,
+				9B20FDC82418299F00DF6A8D /* ShowBillsViewController.swift */,
 				9B72938D2419935700F66CEC /* HydroBillViewController.swift */,
 				9B72938F2419939F00F66CEC /* MobileBillViewController.swift */,
 				9B729391241993B000F66CEC /* InternetBillViewController.swift */,
@@ -227,7 +227,7 @@
 				9B729392241993B000F66CEC /* InternetBillViewController.swift in Sources */,
 				9B1D60A924131E8500101427 /* CustomerListViewController.swift in Sources */,
 				9B1D60AB2413219200101427 /* DataStorage.swift in Sources */,
-				9B20FDC92418299F00DF6A8D /* ViewBillsViewController.swift in Sources */,
+				9B20FDC92418299F00DF6A8D /* ShowBillsViewController.swift in Sources */,
 				9B352548241431CA00EB3875 /* AddNewCustomerViewController.swift in Sources */,
 				9B1D606D2413082700101427 /* SceneDelegate.swift in Sources */,
 				9B1D607F24130D0F00101427 /* Extension.swift in Sources */,
