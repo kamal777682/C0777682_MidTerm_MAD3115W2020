@@ -120,10 +120,15 @@ class InternetBillViewController: UIViewController {
         else
         {
             DataStorage.getInstance().addBill(bill: Internet(billId:  txtBillID.text ?? "" , billDate: txtBillDate.text ?? "" , billType: .Internet, internetProvider: txtInternetProvider.text ?? "" , internetGBUsed: txtInternetUsed.text ?? ""))
-        
-            let customerListVC =
-            self.navigationController?.viewControllers[1] as! CustomerListViewController
-                                  self.navigationController?.popToViewController(customerListVC, animated: true)    }
+              let alertController = UIAlertController(title: "Saved", message:
+                            "New Bill created", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+                         
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+            let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
+        navigationController?.pushViewController(customerListVC, animated: true)
+                    }
+              }
     
 }
 
