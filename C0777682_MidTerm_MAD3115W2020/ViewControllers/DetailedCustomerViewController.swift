@@ -72,9 +72,12 @@ class DetailedCustomerViewController: UIViewController, UITextFieldDelegate
    
           
           let sb = UIStoryboard(name: "Main", bundle: nil)
-          let viewBillVC = sb.instantiateViewController(withIdentifier: "viewBillVC" ) as! ViewBillsViewController
-        viewBillVC.customerBill = self.customer
-        navigationController?.pushViewController(viewBillVC, animated: true)
+    
+              let detailedCustomerVC = sb.instantiateViewController(withIdentifier: "detailedCustomerVC") as! DetailedCustomerViewController
+               // let viewBillVC = sb.instantiateViewController(withIdentifier: "viewBillVC" ) as! ViewBillsViewController
+                detailedCustomerVC.customerBill = self.customer
+                self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
+        
 }
 }
    
