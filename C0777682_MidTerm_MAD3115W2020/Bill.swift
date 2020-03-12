@@ -8,11 +8,11 @@
 
 import Foundation
 
-/*enum BillType {
+enum BillType {
     case Mobile
     case Internet
     case Hydro
-}*/
+}
 
 class Bill 
 {

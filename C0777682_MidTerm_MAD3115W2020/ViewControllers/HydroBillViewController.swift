@@ -22,6 +22,9 @@ class HydroBillViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func btnSaveBill(_ sender: UIButton) {
+    let customerListVC = self.navigationController?.viewControllers[1] as! CustomerListViewController
+                           self.navigationController?.popToViewController(customerListVC, animated: true)
+    
     }
     
     var datePicker : UIDatePicker!

@@ -9,6 +9,9 @@
 import UIKit
 
 class InternetBillViewController: UIViewController {
+    
+    var customer : Customer?
+    var bill : Bill?
 
     @IBOutlet weak var txtBillID: UITextField!
     @IBOutlet weak var txtBillType: UITextField!
@@ -20,11 +23,6 @@ class InternetBillViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
-    @IBAction func btnSaveBill(_ sender: UIButton) {
-    }
-    
     var datePicker : UIDatePicker!
      
     
@@ -78,4 +76,52 @@ class InternetBillViewController: UIViewController {
       
      @objc func cancelClick(){
        txtBillDate.resignFirstResponder()
-     }}
+     }
+
+
+    @IBAction func btnSaveBill(_ sender: UIButton) {
+        if ((txtBillID.text == ""  && txtBillDate.text ==  "" )&&(txtBillType.text == "" && txtBillType.text == "" ) && txtInternetUsed.text == "")
+        {
+              let alertController = UIAlertController(title: "Failed", message:
+                "Enter new bill details", preferredStyle: .alert)
+              alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+              self.present(alertController, animated: true, completion: nil)
+            }
+        else if txtBillID.text == "" {
+            
+              let alertController = UIAlertController(title: "Failed", message:
+                "Enter Bill ID", preferredStyle: .alert)
+              alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+              self.present(alertController, animated: true, completion: nil)
+            }
+        else if txtBillType.text == ""
+        {
+            
+              let alertController = UIAlertController(title: "Failed", message:
+                "Enter BillType", preferredStyle: .alert)
+              alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+              self.present(alertController, animated: true, completion: nil)
+            }
+        else if txtInternetUsed.text == ""
+        {
+            
+              let alertController = UIAlertController(title: "Failed", message:
+                "Enter the amount of internet used", preferredStyle: .alert)
+              alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+              self.present(alertController, animated: true, completion: nil)
+            }
+        else if txtInternetProvider.text == ""
+        {
+            let alertController = UIAlertController(title: "Failed", message:
+              "Enter the internet provider name", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else
+        {
+            DataStorage.getInstance().ad
+        let customerListVC = self.navigationController?.viewControllers[1] as! CustomerListViewController
+                                  self.navigationController?.popToViewController(customerListVC, animated: true)    }
+    
+}
+

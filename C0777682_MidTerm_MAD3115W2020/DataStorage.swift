@@ -29,8 +29,11 @@ class DataStorage
         customerList.updateValue(customer, forKey: customerId)
     }
    
-    
-   
+      func addBill( bill: Bill)
+         {
+            let billId = bill.billId
+           customerBills.updateValue(bill, forKey: billId)
+         }
     
     func loadCustomerDetails()
     {
@@ -47,12 +50,13 @@ class DataStorage
       
         // let m2 = Mobile(billId: "M002", billDate: "08/09/2019", billType: .Mobile, manufacturerName: "Apple Inc.", mobileNumber: "78947800", mobilePlan:"4.5GB + 1000 Min", internetGBUsed: 2, minuteUsed: 200, planRate: 0.95, internetRate: 5)
         
-        c1.addBill(bill: i1, billId: "I001")
-        c1.addBill(bill: h1, billId: "H001")
-        c1.addBill(bill: m1, billId: "M001")
-        c2.addBill(bill: i2, billId: "I002")
-        c2.addBill(bill: h2, billId: "H002")
-        c3.addBill(bill: m1, billId: "M001")
+        
+        c1.addBill(bill: i1)
+        c1.addBill(bill: h1)
+        c1.addBill(bill: m1)
+        c2.addBill(bill: i2)
+        c2.addBill(bill: h2)
+        c3.addBill(bill: i2)
         addCustomer(customer: c1)
         addCustomer(customer: c2)
         addCustomer(customer: c3)
