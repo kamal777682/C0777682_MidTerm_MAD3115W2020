@@ -73,4 +73,18 @@ extension ShowBillsViewController: UITableViewDataSource, UITableViewDelegate
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return CGFloat(150.0)
         }
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+            let customer = DataStorage.getInstance().dictionaryToArray()
+                    let sc = customer[indexPath.row]
+                    let sb = UIStoryboard(name: "Main", bundle: nil)
+                    let detailedCustomerVC = sb.instantiateViewController(withIdentifier: "detailedCustomerVC") as! DetailedCustomerViewController
+                    let ShowBillVC = sb.instantiateViewController(withIdentifier: "ShowBillVC" ) as! ShowBillsViewController
+                   ShowBillVC.customerBill = sc
+                    detailedCustomerVC.customer =  sc
+                   
+                    self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
+                   
+                   
+    }
 }

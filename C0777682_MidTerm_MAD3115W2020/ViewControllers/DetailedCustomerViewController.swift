@@ -70,19 +70,17 @@ class DetailedCustomerViewController: UIViewController, UITextFieldDelegate
 
     @IBAction func btnViewBills(_ sender: UIButton) {
    
-          
-          let sb = UIStoryboard(name: "Main", bundle: nil)
-    
-              let detailedCustomerVC = sb.instantiateViewController(withIdentifier: "detailedCustomerVC") as! DetailedCustomerViewController
-               // let viewBillVC = sb.instantiateViewController(withIdentifier: "viewBillVC" ) as! ViewBillsViewController
-                //detailedCustomerVC.customerBill = self.customer
-                self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
+
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+                               
+            let ShowBillVC = sb.instantiateViewController(withIdentifier: "ShowBillVC" ) as! ShowBillsViewController
+               // ShowBillVC.customerBill = sb
+            self.navigationController?.pushViewController(ShowBillVC, animated: true)
+               
         
 }
 }
-   
-      
-    
+
      
        
     
