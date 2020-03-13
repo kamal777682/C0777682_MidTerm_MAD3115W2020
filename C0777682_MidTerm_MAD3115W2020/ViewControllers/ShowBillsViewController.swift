@@ -47,25 +47,25 @@ extension ShowBillsViewController: UITableViewDataSource, UITableViewDelegate
                 
                 
                 cell.lblBillID?.text = billList.billId
-                //cell.lblBilltype?.text = billList.billType
+                cell.lblBillType.text = "Mobile"
                 cell.lblBillDate?.text = billList.billDate
-                //cell.lblBillAmount.text = String(format:"$%.2f")
+                cell.lblBillAmount.text = String(format:"$%.2f")
                 cell.backgroundColor = UIColor(displayP3Red: 0.98, green: 0.91, blue: 0.71, alpha: 1.0)
             }
             if billList.billId.contains("H")
             {
                 cell.lblBillID?.text = billList.billId
-                //cell.lblBilltype?.text = billList.billType
+                cell.lblBillType.text = "Hydro"
                 cell.lblBillDate?.text = billList.billDate
-                //cell.lblBillAmount.text = String(format:"$%.2f")
+                cell.lblBillAmount.text = String(format:"$%.2f")
                 cell.backgroundColor = UIColor(displayP3Red: 0.91, green: 1.0, blue: 1.0, alpha: 1.0)
             }
             if billList.billId.contains("I")
             {
                 cell.lblBillID?.text = billList.billId
-                //cell.lblBilltype?.text = billList.billType
+                cell.lblBillType.text = "Internet"
                 cell.lblBillDate?.text = billList.billDate
-                //cell.lblBillAmount.text = String(format:"$%.2f")
+                cell.lblBillAmount.text = String(format:"$%.2f")
                 cell.backgroundColor = UIColor(displayP3Red: 0.9, green: 0.9, blue: 0.98, alpha: 1.0)
             }
             return cell
@@ -76,14 +76,14 @@ extension ShowBillsViewController: UITableViewDataSource, UITableViewDelegate
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
             let customer = DataStorage.getInstance().dictionaryToArray()
-                    let sc = customer[indexPath.row]
-                    let sb = UIStoryboard(name: "Main", bundle: nil)
-                    let detailedCustomerVC = sb.instantiateViewController(withIdentifier: "detailedCustomerVC") as! DetailedCustomerViewController
-                    let ShowBillVC = sb.instantiateViewController(withIdentifier: "ShowBillVC" ) as! ShowBillsViewController
-                   ShowBillVC.customerBill = sc
-                    detailedCustomerVC.customer =  sc
-                   
-                    self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
+            let sc = customer[indexPath.row]
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let detailedCustomerVC = sb.instantiateViewController(withIdentifier: "detailedCustomerVC") as! DetailedCustomerViewController
+                   // let ShowBillVC = sb.instantiateViewController(withIdentifier: "ShowBillVC" ) as! ShowBillsViewController
+                  // ShowBillVC.customerBill = sc
+            detailedCustomerVC.customer = customer[indexPath.row]
+            self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
+                   // self.navigationController?.pushViewController(ShowBillVC, animated: true)
                    
                    
     }

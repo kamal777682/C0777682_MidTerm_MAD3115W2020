@@ -68,7 +68,6 @@ extension CustomerListViewController:UITableViewDelegate,UITableViewDataSource
         let ShowBillVC = sb.instantiateViewController(withIdentifier: "ShowBillVC" ) as! ShowBillsViewController
      
         detailedCustomerVC.customer =  sc
-       
         self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
         
         ShowBillVC.customerBill = sc
