@@ -19,13 +19,24 @@ class Bill
     var billId :  String
     var billDate : String
     var billType : BillType
-    var totalBill :String
+    var totalBill :Float
        
-    init(billId : String,billDate : String, billType : BillType, totalBill : String)
+    init(billId : String,billDate : String, billType : BillType, totalBill : Float)
  {
         self.billId = billId
         self.billDate = billDate
         self.billType = billType
         self.totalBill = totalBill
 }
-}
+     func dateFormat(string : String)-> String
+           
+       {
+           let getdate = DateFormatter()
+           getdate.dateFormat = "dd/MM/yyyy"
+           
+           let setdate = DateFormatter()
+           setdate.dateFormat = "EEEE,d MMMM ,yyyy"
+           let date : Date? =  getdate.date(from: billDate)
+           return setdate.string(from: date!)
+             
+       }}

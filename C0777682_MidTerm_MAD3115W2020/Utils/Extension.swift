@@ -31,7 +31,7 @@ extension String
 
 
 
-extension String
+extension Int
 {
       func dataUsed () -> String{
           let data = String.init(format : "%i GB",self)
@@ -43,7 +43,10 @@ extension String
           let time = String.init(format: "%i min",self)
           return time
       }
-    
+}
+extension Float
+{
+       
     func cur() ->String
     {
         let cur = String.init(format: "$%.2f",self)

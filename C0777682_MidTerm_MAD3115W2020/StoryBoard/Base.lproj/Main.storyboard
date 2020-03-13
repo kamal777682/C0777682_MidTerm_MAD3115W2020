@@ -584,6 +584,7 @@
                         <viewLayoutGuide key="safeArea" id="yn1-hd-bck"/>
                     </view>
                     <connections>
+                        <outlet property="txtBillAmount" destination="7g8-LW-fw4" id="IVl-9S-XXo"/>
                         <outlet property="txtBillDate" destination="eM4-Z5-qHT" id="63X-Bn-fVi"/>
                         <outlet property="txtBillID" destination="VqD-mf-i9h" id="Uil-Tq-dTl"/>
                         <outlet property="txtBillType" destination="8xs-D2-hOA" id="pW0-19-rrg"/>

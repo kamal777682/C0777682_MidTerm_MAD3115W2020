@@ -13,7 +13,7 @@ class DataStorage
     
     private  static let instance =  DataStorage()
     lazy var customerList = Dictionary<String, Customer>()
-    lazy var customerBills = Dictionary<String,Bill>()
+    //lazy var customerBills = Dictionary<String,Bill>()
     
     
     private init(){}
@@ -29,11 +29,11 @@ class DataStorage
         customerList.updateValue(customer, forKey: customerId)
     }
    
-      func addBill( bill: Bill)
+      /*func addBill( bill: Bill)
          {
             let billId = bill.billId
            customerBills.updateValue(bill, forKey: billId)
-         }
+         }*/
     
     func loadCustomerDetails()
     {
@@ -41,22 +41,21 @@ class DataStorage
         let c2 = Customer(customerId: "C002", firstName: "Nikita", lastName: "Sandhu", email: "niksandhu23@gmail.com")
         let c3 = Customer(customerId: "C003", firstName: "Jyoti", lastName: "Thomas", email: "jyotiT@outlook.com")
        
-        let i1 = Internet(billId: "I001", billDate: "20/02/2019", billType: .Internet, totalBill : " 40".cur() , internetProvider: "Rogers", internetGBUsed: "10.dataUsed()")
+        let i1 = Internet(billId: "I001", billDate: "20/02/2019", billType: .Internet, totalBill : 40, internetProvider: "Rogers", internetGBUsed: 10)
         
-        let i2 = Internet(billId: "I002", billDate: "14/03/2019", billType: .Internet, totalBill: "20".cur() , internetProvider: "Freedom", internetGBUsed: "5".dataUsed())
-        let h1 = Hydro(billId: "H001", billDate: "26/04/2018", billType: .Hydro, totalBill: "110".curPerUnit(), agencyName: "Planet Energy", unitConsumed: "200 units")
-        let h2 = Hydro(billId: "H002", billDate: "03/09/2019", billType: .Hydro, totalBill: "50".curPerUnit(), agencyName: "OntarioHydro", unitConsumed: "700")
-        let m1 = Mobile(billId: "M001", billDate: "07/09/2019", billType: .Mobile, totalBill: "45".cur(), manufacturerName: "Apple Inc.", mobilePlan: "4.5GB + 1000 Min", mobileNumber: "4504500577", internetGBUsed: "4", minuteUsed: "100")
+        let i2 = Internet(billId: "I002", billDate: "14/03/2019", billType: .Internet, totalBill: 20 , internetProvider: "Freedom", internetGBUsed: 5)
+        let h1 = Hydro(billId: "H001", billDate: "26/04/2018", billType: .Hydro, totalBill: 110, agencyName: "Planet Energy", unitConsumed: 200)
+        let h2 = Hydro(billId: "H002", billDate: "03/09/2019", billType: .Hydro, totalBill: 50, agencyName: "OntarioHydro", unitConsumed: 700)
+        let m1 = Mobile(billId: "M001", billDate: "07/09/2019", billType: .Mobile, totalBill: 45, manufacturerName: "Apple Inc.", mobilePlan: "4.5GB + 1000 Min", mobileNumber: "4504500577", internetGBUsed: 4, minuteUsed: 100)
       
         // let m2 = Mobile(billId: "M002", billDate: "08/09/2019", billType: .Mobile, manufacturerName: "Apple Inc.", mobileNumber: "78947800", mobilePlan:"4.5GB + 1000 Min", internetGBUsed: 2, minuteUsed: 200, planRate: 0.95, internetRate: 5)
         
-        
-        c1.addBill(bill: i1)
-        c1.addBill(bill: h1)
-        c1.addBill(bill: m1)
-        c2.addBill(bill: i2)
-        c2.addBill(bill: h2)
-        c3.addBill(bill: i2)
+        c1.addBill(bill: i1, billId: i1.billId)
+        c1.addBill(bill: h1, billId: h1.billId)
+        c1.addBill(bill: m1, billId: m1.billId)
+        c2.addBill(bill: i2, billId: i2.billId)
+        c3.addBill(bill: h2, billId: h2.billId)
+        c3.addBill(bill: i2, billId: i2.billId)
         addCustomer(customer: c1)
         addCustomer(customer: c2)
         addCustomer(customer: c3)

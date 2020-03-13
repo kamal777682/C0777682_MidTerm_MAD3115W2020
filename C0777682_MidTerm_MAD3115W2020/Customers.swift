@@ -15,7 +15,7 @@ class Customer
     var firstName : String
     var lastName : String
     lazy var bills = [String : Bill]()   //dictionary creation
-    lazy var totalBillAmount : Double = 0.0
+    lazy var totalBillAmount : Float = 0.0
     var email : String
    
     init(customerId : String,firstName : String, lastName : String,email : String)
@@ -28,10 +28,11 @@ class Customer
         
     }
      
-     func addBill( bill: Bill)
+    func addBill( bill: Bill, billId : String)
           {
              let billId = bill.billId
             bills.updateValue(bill, forKey: billId)
+            totalBillAmount = totalBillAmount + bill.totalBill
           }
      func getBills() -> [Bill]{
            var customerBills = [Bill]()

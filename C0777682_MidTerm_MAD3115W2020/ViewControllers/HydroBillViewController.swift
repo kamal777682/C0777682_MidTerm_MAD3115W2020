@@ -9,6 +9,8 @@
 import UIKit
 
 class HydroBillViewController: UIViewController,UITextFieldDelegate {
+    
+    var customer : Customer?
 
     @IBOutlet weak var txtBillId: UITextField!
     @IBOutlet weak var txtBillDate: UITextField!
@@ -22,9 +24,69 @@ class HydroBillViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func btnSaveBill(_ sender: UIButton) {
-    let customerListVC = self.navigationController?.viewControllers[1] as! CustomerListViewController
-                           self.navigationController?.popToViewController(customerListVC, animated: true)
-    
+        if ((txtBillId.text == ""  && txtBillDate.text ==  "" ) && ( txtBillType.text == "" &&  txtBillAmount.text == "" ) && (txtAgencyName.text == "" && txtUnitConsumed.text == ""))
+        {
+            
+            
+                    let alertController = UIAlertController(title: "Failed", message:
+                       "Enter new bill details", preferredStyle: .alert)
+                     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                     self.present(alertController, animated: true, completion: nil)
+            }
+               
+        else if txtBillDate.text == "" {
+                   
+                     let alertController = UIAlertController(title: "Failed", message:
+                       "Enter Bill Date", preferredStyle: .alert)
+                     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                     self.present(alertController, animated: true, completion: nil)
+                   }
+
+        else if txtBillType.text == ""
+               {
+                   
+                     let alertController = UIAlertController(title: "Failed", message:
+                       "Enter BillType", preferredStyle: .alert)
+                     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                     self.present(alertController, animated: true, completion: nil)
+                   }
+               
+        else if txtBillAmount.text == ""
+               {
+                   
+                     let alertController = UIAlertController(title: "Failed", message:
+                       "Enter the  bill amount", preferredStyle: .alert)
+                     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                     self.present(alertController, animated: true, completion: nil)
+                   }
+               
+        else if txtAgencyName.text == ""
+               {
+                   let alertController = UIAlertController(title: "Failed", message:
+                     "Enter the agency Name", preferredStyle: .alert)
+                   alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                   self.present(alertController, animated: true, completion: nil)
+               }
+        else if txtUnitConsumed.text == ""
+        {
+            let alertController = UIAlertController(title: "Failed", message:
+                                "Enter the Unit Consumed", preferredStyle: .alert)
+                              alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                              self.present(alertController, animated: true, completion: nil)
+        }
+                
+        else
+               
+        {
+            
+            
+            //DataStorage.getInstance().addBill(bill : Hydro(billId: txtBillId.text ?? "" , billDate: txtBillDate.text ?? "", billType: .Hydro  , totalBill: txtBillAmount.text ?? "", agencyName: txtAgencyName.text ?? "" , unitConsumed: txtUnitConsumed.text ?? ""))
+            let tempOBJ = Hydro(billId: txtBillId.text ?? "" , billDate: txtBillDate.text ?? "", billType: .Hydro  , totalBill: Float(txtBillAmount.text ??  "")!, agencyName: txtAgencyName.text ?? "" , unitConsumed: Int(txtUnitConsumed.text ?? "")!)
+            
+            customer?.addBill(bill: tempOBJ, billId: tempOBJ.billId)
+            navigationController?.popViewController(animated: true)
+            }
+
     }
     
     var datePicker : UIDatePicker!

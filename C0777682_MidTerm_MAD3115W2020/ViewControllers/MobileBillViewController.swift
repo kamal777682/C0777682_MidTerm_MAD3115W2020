@@ -9,6 +9,8 @@
 import UIKit
 
 class MobileBillViewController: UIViewController {
+    
+    var customer : Customer?
 
     @IBOutlet weak var txtBillID: UITextField!
     
@@ -17,6 +19,7 @@ class MobileBillViewController: UIViewController {
    
     @IBOutlet weak var txtMobilePlan: UITextField!
     
+    @IBOutlet weak var txtBillAmount: UITextField!
     @IBOutlet weak var txtMobileNumber: UITextField!
     @IBOutlet weak var txtInternetUsed: UITextField!
     @IBOutlet weak var txtMinuteUsed: UITextField!
@@ -28,8 +31,74 @@ class MobileBillViewController: UIViewController {
     }
     
     @IBAction func btnSaveBill(_ sender: UIButton) {
-         let customerListVC = self.navigationController?.viewControllers[1] as! CustomerListViewController
-                                  self.navigationController?.popToViewController(customerListVC, animated: true)    }
+        if ((txtBillID.text == ""  && txtBillDate.text ==  "" ) && ( txtBillType.text == "" &&  txtManufactureName.text == "") && ( txtMobilePlan.text == "" && txtMobileNumber.text == "") &&  (txtInternetUsed.text == "" && txtBillDate.text == ""))
+        {
+            
+            
+                    let alertController = UIAlertController(title: "Failed", message:
+                       "Enter new bill details", preferredStyle: .alert)
+                     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                     self.present(alertController, animated: true, completion: nil)
+            }
+               
+        else if txtBillID.text == "" {
+                   
+                     let alertController = UIAlertController(title: "Failed", message:
+                       "Enter Bill ID", preferredStyle: .alert)
+                     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                     self.present(alertController, animated: true, completion: nil)
+                   }
+        else if txtMobileNumber.text == ""
+        {
+            let alertController = UIAlertController(title: "Failed", message:
+                            "Enter the mobile Number", preferredStyle: .alert)
+                          alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                          self.present(alertController, animated: true, completion: nil)
+        }
+        else if txtBillType.text == ""
+               {
+                   
+                     let alertController = UIAlertController(title: "Failed", message:
+                       "Enter BillType", preferredStyle: .alert)
+                     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                     self.present(alertController, animated: true, completion: nil)
+                   }
+               
+        else if txtInternetUsed.text == ""
+               {
+                   
+                     let alertController = UIAlertController(title: "Failed", message:
+                       "Enter the amount of internet used", preferredStyle: .alert)
+                     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                     self.present(alertController, animated: true, completion: nil)
+                   }
+               
+        else if txtMinuteUsed.text == ""
+               {
+                   let alertController = UIAlertController(title: "Failed", message:
+                     "Enter the minutes used", preferredStyle: .alert)
+                   alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                   self.present(alertController, animated: true, completion: nil)
+               }
+        else if txtMobilePlan.text == ""
+        {
+            let alertController = UIAlertController(title: "Failed", message:
+                                "Enter the mobile Plan", preferredStyle: .alert)
+                              alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                              self.present(alertController, animated: true, completion: nil)
+        }
+                
+        else
+               
+        {
+            //DataStorage.getInstance().addBill(bill: Mobile(billId: txtBillID.text ?? "", billDate: txtBillDate.text ?? "", billType: .Mobile, totalBill: txtBillAmount.text ?? "", manufacturerName: txtManufactureName.text ?? "", mobilePlan: txtMobilePlan.text ?? "" , mobileNumber: txtMobileNumber.text ?? "" , internetGBUsed: txtInternetUsed.text ?? "" , minuteUsed: txtMinuteUsed.text ?? "" ))
+                     
+            let tempOBJ = Mobile(billId: txtBillID.text ?? "", billDate: txtBillDate.text ?? "", billType: .Mobile, totalBill: Float(txtBillAmount.text ?? "")!, manufacturerName: txtManufactureName.text ?? "", mobilePlan: txtMobilePlan.text ?? "" , mobileNumber: txtMobileNumber.text ?? "" , internetGBUsed: Int(txtInternetUsed.text ?? "")! ,minuteUsed: Int( txtMinuteUsed.text ?? "" )!)
+            
+            customer?.addBill(bill: tempOBJ, billId: tempOBJ.billId)
+            navigationController?.popViewController(animated: true)
+            }
+        }
     
     var datePicker : UIDatePicker!
      

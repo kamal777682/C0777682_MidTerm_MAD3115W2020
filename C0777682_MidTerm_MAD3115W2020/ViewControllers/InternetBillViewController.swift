@@ -120,17 +120,17 @@ class InternetBillViewController: UIViewController {
         }
         else
         {
-            DataStorage.getInstance().addBill(bill: Internet(billId:  txtBillID.text ?? "" , billDate: txtBillDate.text ?? "" , billType: .Internet, totalBill: tblBillAmount.text ?? "" , internetProvider: txtInternetProvider.text ?? "" , internetGBUsed: txtInternetUsed.text ?? ""))
-              let alertController = UIAlertController(title: "Saved", message:
-                            "New Bill created", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .default))
-                         
-                let sb = UIStoryboard(name: "Main", bundle: nil)
-            let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
-        navigationController?.pushViewController(customerListVC, animated: true)
-                    }
+           
+                
+            
+            let tempOBJ =
+                Internet(billId: txtBillID.text ?? "" , billDate: txtBillDate.text ?? "", billType: .Internet, totalBill: Float( tblBillAmount.text ?? "" )! , internetProvider: txtInternetProvider.text ?? "" , internetGBUsed:Int(txtInternetUsed.text ?? "" )!)
+            
+            customer?.addBill(bill: tempOBJ, billId: tempOBJ.billId)
+            navigationController?.popViewController(animated: true)
+           
               }
     
 }
-
+}
 
