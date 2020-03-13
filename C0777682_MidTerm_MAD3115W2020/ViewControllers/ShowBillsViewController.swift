@@ -13,7 +13,7 @@ class ShowBillsViewController: UIViewController {
     var customer : Customer?
     var customerBill : Customer?
     var bills = [Bill]()
-    
+     //self.navigationItem.hidesBackButton = true
     @IBOutlet weak var tblData: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +29,9 @@ class ShowBillsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool)
     {
         tblData.reloadData()
+        
+     self.navigationItem.hidesBackButton = true
     }
-
    
 }
 

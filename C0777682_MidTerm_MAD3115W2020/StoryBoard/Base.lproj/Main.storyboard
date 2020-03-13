@@ -260,7 +260,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wue-8D-rMq">
-                                <rect key="frame" x="21" y="298" width="37" height="13"/>
+                                <rect key="frame" x="21" y="300" width="37" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -289,6 +289,19 @@
                                     <action selector="btnViewBills:" destination="M2K-PS-ePG" eventType="touchUpInside" id="Yp1-kf-O2a"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMF-Y7-fXP">
+                                <rect key="frame" x="136" y="330" width="194" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJd-cO-Qdx">
+                                <rect key="frame" x="21" y="342" width="55" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Foq-uJ-I8T"/>
@@ -317,6 +330,7 @@
                         <outlet property="txtCustomerID" destination="xGK-ix-0gz" id="U99-yb-oZc"/>
                         <outlet property="txtCustomerLName" destination="Lmb-q1-KRP" id="J6L-rN-pqb"/>
                         <outlet property="txtEmail" destination="YaW-BZ-KgC" id="4Hp-v9-1hh"/>
+                        <outlet property="txtTotalBill" destination="AMF-Y7-fXP" id="JQz-6Z-pcG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRk-Zl-wBV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

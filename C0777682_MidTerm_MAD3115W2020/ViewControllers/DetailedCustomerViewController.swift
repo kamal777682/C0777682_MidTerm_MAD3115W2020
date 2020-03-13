@@ -22,6 +22,7 @@ class DetailedCustomerViewController: UIViewController, UITextFieldDelegate
     
     @IBOutlet var txtEmail: UITextField!
     
+    @IBOutlet weak var txtTotalBill: UITextField!
     
     @IBOutlet weak var btnViewBills: UIButton!
     
@@ -33,10 +34,8 @@ class DetailedCustomerViewController: UIViewController, UITextFieldDelegate
         self.txtCustomerFName.text = customer?.firstName
         self.txtCustomerLName.text = customer?.lastName
         self.txtEmail.text = customer?.email
-       
-  
+        self.txtTotalBill.text = "\(String(describing: customer!.totalBillAmount.cur()))"
     }
-  
         @IBAction func btnCustomers(_ sender: UIBarButtonItem) {
                 let customerListVC = self.navigationController?.viewControllers[1] as! CustomerListViewController
                     self.navigationController?.popToViewController(customerListVC, animated: true)
@@ -77,7 +76,7 @@ class DetailedCustomerViewController: UIViewController, UITextFieldDelegate
             let ShowBillVC = sb.instantiateViewController(withIdentifier: "ShowBillVC" ) as! ShowBillsViewController
             ShowBillVC.customer = self.customer
             ShowBillVC.customerBill = self.customer;
-        print(self.customer?.bills);
+            print(self.customer?.bills);
             self.navigationController?.pushViewController(ShowBillVC, animated: true)
                
         
