@@ -40,19 +40,19 @@ extension CustomerListViewController:UITableViewDelegate,UITableViewDataSource
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return DataStorage.getInstance().customerList.count
-        //customerName.count
+       
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerName")
         let customers = DataStorage.getInstance().dictionaryToArray()
         let customer = customers[indexPath.row]
-        
         cell?.textLabel?.text = customer.firstName
-            
         return cell!
     }
   
@@ -60,20 +60,15 @@ extension CustomerListViewController:UITableViewDelegate,UITableViewDataSource
     // to display selected row
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         tableView.deselectRow(at: indexPath, animated : true)
         let customer = DataStorage.getInstance().dictionaryToArray()
         let sc = customer[indexPath.row]
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let detailedCustomerVC = sb.instantiateViewController(withIdentifier: "detailedCustomerVC") as! DetailedCustomerViewController
-//        let ShowBillVC = sb.instantiateViewController(withIdentifier: "ShowBillVC" ) as! ShowBillsViewController
-     
         detailedCustomerVC.customer =  sc
-        //print(sc.bills);
-        self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
-        
-//        ShowBillVC.customerBill = sc
-//        self.navigationController?.pushViewController(ShowBillVC, animated: true)
        
+        self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
     }
 }
        

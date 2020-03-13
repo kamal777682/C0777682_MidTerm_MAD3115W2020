@@ -22,21 +22,21 @@ class ShowBillsViewController: UIViewController {
         }
         print(bills);
         self.title = "Bill Details"
+        
+        self.navigationItem.hidesBackButton = true
+        
         //let cellID = String(describing : BillTableViewCell.self)
         // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool)
     {
-        tblData.reloadData()
-        
-     self.navigationItem.hidesBackButton = true
+            tblData.reloadData()
     }
-   
+     
 }
-
-    
-extension ShowBillsViewController: UITableViewDataSource, UITableViewDelegate
+   
+  extension ShowBillsViewController: UITableViewDataSource, UITableViewDelegate
     {
         func numberOfSections(in tableView: UITableView) -> Int
         {
@@ -87,12 +87,8 @@ extension ShowBillsViewController: UITableViewDataSource, UITableViewDelegate
             let sc = customer[indexPath.row]
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let detailedCustomerVC = sb.instantiateViewController(withIdentifier: "detailedCustomerVC") as! DetailedCustomerViewController
-                   // let ShowBillVC = sb.instantiateViewController(withIdentifier: "ShowBillVC" ) as! ShowBillsViewController
-                  // ShowBillVC.customerBill = sc
             detailedCustomerVC.customer = customer[indexPath.row]
             self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
-                   // self.navigationController?.pushViewController(ShowBillVC, animated: true)
-                   
                    
     }
 }
