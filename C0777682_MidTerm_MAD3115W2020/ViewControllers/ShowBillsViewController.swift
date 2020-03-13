@@ -49,7 +49,7 @@ extension ShowBillsViewController: UITableViewDataSource, UITableViewDelegate
                 cell.lblBillID?.text = billList.billId
                 cell.lblBillType.text = "Mobile"
                 cell.lblBillDate?.text = billList.billDate
-                cell.lblBillAmount.text = String(format:"$%.2f")
+                cell.lblBillAmount.text = billList.totalBill
                 cell.backgroundColor = UIColor(displayP3Red: 0.98, green: 0.91, blue: 0.71, alpha: 1.0)
             }
             if billList.billId.contains("H")
@@ -57,7 +57,7 @@ extension ShowBillsViewController: UITableViewDataSource, UITableViewDelegate
                 cell.lblBillID?.text = billList.billId
                 cell.lblBillType.text = "Hydro"
                 cell.lblBillDate?.text = billList.billDate
-                cell.lblBillAmount.text = String(format:"$%.2f")
+                cell.lblBillAmount.text = billList.totalBill
                 cell.backgroundColor = UIColor(displayP3Red: 0.91, green: 1.0, blue: 1.0, alpha: 1.0)
             }
             if billList.billId.contains("I")
@@ -65,7 +65,7 @@ extension ShowBillsViewController: UITableViewDataSource, UITableViewDelegate
                 cell.lblBillID?.text = billList.billId
                 cell.lblBillType.text = "Internet"
                 cell.lblBillDate?.text = billList.billDate
-                cell.lblBillAmount.text = String(format:"$%.2f")
+                cell.lblBillAmount.text = billList.totalBill
                 cell.backgroundColor = UIColor(displayP3Red: 0.9, green: 0.9, blue: 0.98, alpha: 1.0)
             }
             return cell

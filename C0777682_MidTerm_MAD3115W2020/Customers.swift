@@ -41,13 +41,13 @@ class Customer
            return customerBills
        }
     
-     func calculateTotalBill()-> Double
+    /* func calculateTotalBill()-> Double
          {
            for i in bills
            {
                totalBillAmount = totalBillAmount + i.value.totalBill
            }
            return totalBillAmount
-         }
+         }*/
     
 }

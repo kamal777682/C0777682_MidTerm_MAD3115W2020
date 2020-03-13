@@ -16,6 +16,7 @@ class InternetBillViewController: UIViewController {
     @IBOutlet weak var txtBillID: UITextField!
     @IBOutlet weak var txtBillType: UITextField!
     @IBOutlet weak var txtInternetProvider: UITextField!
+    @IBOutlet weak var tblBillAmount: UITextField!
     @IBOutlet weak var txtBillDate: UITextField!
     @IBOutlet weak var txtInternetUsed: UITextField!
     override func viewDidLoad() {
@@ -119,7 +120,7 @@ class InternetBillViewController: UIViewController {
         }
         else
         {
-            DataStorage.getInstance().addBill(bill: Internet(billId:  txtBillID.text ?? "" , billDate: txtBillDate.text ?? "" , billType: .Internet, internetProvider: txtInternetProvider.text ?? "" , internetGBUsed: txtInternetUsed.text ?? ""))
+            DataStorage.getInstance().addBill(bill: Internet(billId:  txtBillID.text ?? "" , billDate: txtBillDate.text ?? "" , billType: .Internet, totalBill: tblBillAmount.text ?? "" , internetProvider: txtInternetProvider.text ?? "" , internetGBUsed: txtInternetUsed.text ?? ""))
               let alertController = UIAlertController(title: "Saved", message:
                             "New Bill created", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))

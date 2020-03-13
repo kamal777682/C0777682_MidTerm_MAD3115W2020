@@ -28,22 +28,22 @@ extension String
     
 }
 
-extension Int{
-    func dataUsed () -> String{
-        let data = String.init(format : "%i GB",self)
-        return data
-    }
-     
-    func timeInMinutes() -> String
-    {
-        let time = String.init(format: "%i min",self)
-        return time
-    }
-}
 
 
-extension Double
+
+extension String
 {
+      func dataUsed () -> String{
+          let data = String.init(format : "%i GB",self)
+          return data
+      }
+       
+      func timeInMinutes() -> String
+      {
+          let time = String.init(format: "%i min",self)
+          return time
+      }
+    
     func cur() ->String
     {
         let cur = String.init(format: "$%.2f",self)

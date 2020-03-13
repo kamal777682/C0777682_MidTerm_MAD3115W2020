@@ -662,6 +662,7 @@
                         <viewLayoutGuide key="safeArea" id="oj2-XH-q4Y"/>
                     </view>
                     <connections>
+                        <outlet property="tblBillAmount" destination="Hh9-Nd-cHw" id="zRp-66-VG9"/>
                         <outlet property="txtBillDate" destination="vZw-vl-tEU" id="345-B2-vu5"/>
                         <outlet property="txtBillID" destination="ikR-TC-4bY" id="Q70-ZY-Lty"/>
                         <outlet property="txtBillType" destination="gWY-GA-Z45" id="Pxw-Wl-yCx"/>
