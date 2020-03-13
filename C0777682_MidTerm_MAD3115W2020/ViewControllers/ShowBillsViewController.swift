@@ -10,18 +10,25 @@ import UIKit
 
 class ShowBillsViewController: UIViewController {
 
+    var customer : Customer?
     var customerBill : Customer?
     var bills = [Bill]()
     
+    @IBOutlet weak var tblData: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         if customerBill != nil{
             bills = (customerBill?.getBills())!
         }
-        
+        print(bills);
         self.title = "Bill Details"
-        let cellID = String(describing : BillTableViewCell.self)
+        //let cellID = String(describing : BillTableViewCell.self)
         // Do any additional setup after loading the view.
+    }
+
+    override func viewWillAppear(_ animated: Bool)
+    {
+        tblData.reloadData()
     }
 
    

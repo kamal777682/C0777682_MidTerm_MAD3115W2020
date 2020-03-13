@@ -85,14 +85,12 @@ class HydroBillViewController: UIViewController,UITextFieldDelegate {
             
             customer?.addBill(bill: tempOBJ, billId: tempOBJ.billId)
             navigationController?.popViewController(animated: true)
+            //print(tempOBJ)
             }
 
     }
     
     var datePicker : UIDatePicker!
-     
-    
-      
      
      override func didReceiveMemoryWarning()
      {
