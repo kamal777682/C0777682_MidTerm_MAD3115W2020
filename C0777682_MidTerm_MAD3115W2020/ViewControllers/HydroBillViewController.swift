@@ -82,11 +82,7 @@ class HydroBillViewController: UIViewController,UITextFieldDelegate {
             let tempOBJ = Hydro(billId: txtBillId.text ?? "" , billDate: txtBillDate.text ?? "", billType: .Hydro  , totalBill: Float(txtBillAmount.text ??  "")!, agencyName: txtAgencyName.text ?? "" , unitConsumed: Int(txtUnitConsumed.text ?? "")!)
             
             customer?.addBill(bill: tempOBJ, billId: tempOBJ.billId)
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            let ShowBillVC = sb.instantiateViewController(withIdentifier: "ShowBillVC" ) as! ShowBillsViewController
-            //self.navigationController?.pushViewController(ShowBillVC, animated: true)
             navigationController?.popViewController(animated: true)
-            //print(tempOBJ)
             }
 
     }
