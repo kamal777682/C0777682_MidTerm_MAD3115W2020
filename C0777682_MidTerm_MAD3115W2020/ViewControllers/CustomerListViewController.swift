@@ -19,6 +19,7 @@ class CustomerListViewController: UIViewController
     override func viewDidLoad() {
     super.viewDidLoad()
         
+       
         //customerName = DataStorage.getInstance().loadCustomerDetails()
         
         self.title = "Customers"
@@ -30,6 +31,7 @@ class CustomerListViewController: UIViewController
     }
     @IBAction func btnLogout(_ sender: UIBarButtonItem)
     {
+        
         self.navigationController?.popViewController(animated: true)
     }
 }
