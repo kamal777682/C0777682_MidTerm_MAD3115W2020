@@ -30,6 +30,12 @@ class MobileBillViewController: UIViewController {
 
     }
     
+    @IBAction func btnCancel(_ sender: UIButton) {
+        
+         let sb = UIStoryboard(name: "Main", bundle: nil)
+        let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
+        navigationController?.pushViewController(customerListVC, animated: true)
+    }
     @IBAction func btnSaveBill(_ sender: UIButton) {
         if ((txtBillID.text == ""  && txtBillDate.text ==  "" ) && ( txtBillType.text == "" &&  txtManufactureName.text == "") && ( txtMobilePlan.text == "" && txtMobileNumber.text == "") &&  (txtInternetUsed.text == "" && txtBillDate.text == ""))
         {
